@@ -10,16 +10,59 @@ import UIKit
 
 extension UIColor {
     
-    class var blue:UIColor {
+    class var blue1:UIColor {
         get {
-            return UIColor(red:0.421593, green: 0.657718, blue: 0.972549, alpha: 1)
+            return UIColor(hexString: "#128ef2")
         }
     }
     
-    class var lightBlue:UIColor {
+    class var blue2:UIColor {
         get {
-            return UIColor(red:0.700062, green: 0.817345, blue: 0.972549, alpha: 1)
+            return UIColor(hexString: "#2a99f4")
         }
     }
     
+    class var blue3:UIColor {
+        get {
+            return UIColor(hexString: "#42a5f5")
+        }
+    }
+    
+    class var blue4:UIColor {
+        get {
+            return UIColor(hexString: "#5ab1f6")
+        }
+    }
+    
+    class var blue5:UIColor {
+        get {
+            return UIColor(hexString: "#72bcf8")
+        }
+    }
+    
+    class var blue6:UIColor {
+        get {
+            return UIColor(hexString: "#8bc8f9")
+        }
+    }
+    
+    
+    // Creates a UIColor from a Hex string.
+    convenience init(hexString: String) {
+        let hex = hexString.stringByTrimmingCharactersInSet(NSCharacterSet.alphanumericCharacterSet().invertedSet)
+        var int = UInt32()
+        NSScanner(string: hex).scanHexInt(&int)
+        let a, r, g, b: UInt32
+        switch hex.characters.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (1, 1, 1, 0)
+        }
+        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
+    }
 }

@@ -57,8 +57,8 @@ class FeedViewController: UITableViewController {
         self.refreshColorView.alpha = 0.30
         
         // Create the graphic image views
-        compass_background = UIImageView(image: UIImage(named: "compass_background.png"))
-        self.compass_spinner = UIImageView(image: UIImage(named: "compass_spinner.png"))
+        compass_background = UIImageView(image: UIImage(named: "compass_background"))
+        self.compass_spinner = UIImageView(image: UIImage(named: "compass_spinner="))
         
         // Add the graphics to the loading view
         self.refreshLoadingView.addSubview(self.compass_background)
@@ -84,15 +84,14 @@ class FeedViewController: UITableViewController {
     
     func refresh(){
         
-        // -- DO SOMETHING AWESOME (... or just wait 3 seconds) --
-        // This is where you'll make requests to an API, reload data, or process information
+        //contact API
+        
         let delayInSeconds = 3.0;
         let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)));
         dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
             // When done requesting/reloading/processing invoke endRefreshing, to close the control
             self.refreshControl!.endRefreshing()
         }
-        // -- FINISHED SOMETHING AWESOME, WOO! --
     }
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -163,15 +162,13 @@ class FeedViewController: UITableViewController {
         if (self.refreshControl!.refreshing && !self.isRefreshAnimating) {
             self.animateRefreshView()
         }
-        
-        print("pullDistance \(pullDistance), pullRatio: \(pullRatio), midX: \(midX), refreshing: \(self.refreshControl!.refreshing)")
     }
     
     func animateRefreshView() {
         
         // Background color to loop through for our color view
         
-        var colorArray = [UIColor.redColor(), UIColor.blueColor(), UIColor.purpleColor(), UIColor.cyanColor(), UIColor.orangeColor(), UIColor.magentaColor()]
+        var colorArray = [UIColor.blue1, UIColor.blue2, UIColor.blue3, UIColor.blue4, UIColor.blue5, UIColor.blue6]
         
         // In Swift, static variables must be members of a struct or class
         struct ColorIndex {
@@ -217,8 +214,6 @@ class FeedViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Table view data source
-    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
@@ -236,8 +231,6 @@ class FeedViewController: UITableViewController {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
         
-        
-        // Configure the cell...
         cell.textLabel?.text = "Row \(indexPath.row)"
         
         return cell

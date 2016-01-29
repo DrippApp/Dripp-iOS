@@ -10,7 +10,7 @@ import UIKit
 
 class FeedCell: UITableViewCell {
     
-    let color = UIColor.lightBlue
+    let color = UIColor.blue1
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

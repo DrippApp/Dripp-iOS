@@ -3,3 +3,4 @@ use_frameworks!
 
 pod 'SwiftyJSON'
 pod 'Alamofire'
+pod 'PullToBounce'

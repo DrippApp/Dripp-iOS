@@ -25,6 +25,7 @@
 		5492EC231C5C04ED00A97F06 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC221C5C04ED00A97F06 /* FeedCell.swift */; };
 		5492EC251C5C052100A97F06 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC241C5C052100A97F06 /* Colors.swift */; };
 		5492EC2B1C5C1D8200A97F06 /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC2A1C5C1D8200A97F06 /* UIImageColors.swift */; };
+		5492EC2D1C5C206400A97F06 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC2C1C5C206400A97F06 /* FriendsViewController.swift */; };
 		61489BC45D92687FCC10AD2A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A333912402514296D82CBFD /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		5492EC221C5C04ED00A97F06 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		5492EC241C5C052100A97F06 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		5492EC2A1C5C1D8200A97F06 /* UIImageColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
+		5492EC2C1C5C206400A97F06 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		89AC20D05B519CBA808E268B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8A333912402514296D82CBFD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -130,6 +132,7 @@
 				5492EBDB1C5B271600A97F06 /* AppDelegate.swift */,
 				5492EC0D1C5B2EA800A97F06 /* SettingsViewController.swift */,
 				5492EC131C5B2EEF00A97F06 /* SearchViewController.swift */,
+				5492EC2C1C5C206400A97F06 /* FriendsViewController.swift */,
 				5492EC0F1C5B2EB500A97F06 /* ShowerViewController.swift */,
 				5492EC241C5C052100A97F06 /* Colors.swift */,
 				5492EC111C5B2ECE00A97F06 /* ProfileViewController.swift */,
@@ -379,6 +382,7 @@
 				5492EC2B1C5C1D8200A97F06 /* UIImageColors.swift in Sources */,
 				5492EC251C5C052100A97F06 /* Colors.swift in Sources */,
 				5492EC231C5C04ED00A97F06 /* FeedCell.swift in Sources */,
+				5492EC2D1C5C206400A97F06 /* FriendsViewController.swift in Sources */,
 				5492EC141C5B2EEF00A97F06 /* SearchViewController.swift in Sources */,
 				5492EC1F1C5BF95400A97F06 /* Dripper.swift in Sources */,
 				5492EBDC1C5B271600A97F06 /* AppDelegate.swift in Sources */,

@@ -7,7 +7,7 @@
         <!--Search-->
         <scene sceneID="Scb-O2-UPW">
             <objects>
-                <viewController id="sgT-er-E9m" sceneMemberID="viewController">
+                <viewController id="sgT-er-E9m" customClass="SearchViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zQt-Jl-aE3"/>
                         <viewControllerLayoutGuide type="bottom" id="SnF-Hz-gfz"/>
@@ -47,7 +47,7 @@
         <!--Feed-->
         <scene sceneID="MPI-Q2-gGD">
             <objects>
-                <tableViewController id="asi-SV-0hO" sceneMemberID="viewController">
+                <tableViewController id="asi-SV-0hO" customClass="FeedViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SkY-UM-8bR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,7 +76,7 @@
         <!--Shower-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="ShowerViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -116,7 +116,7 @@
         <!--Profile-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="ProfileViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -156,7 +156,7 @@
         <!--Settings-->
         <scene sceneID="k40-5F-5l9">
             <objects>
-                <viewController id="JVm-fe-0c9" sceneMemberID="viewController">
+                <viewController id="JVm-fe-0c9" customClass="SettingsViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EdL-Uz-S2w"/>
                         <viewControllerLayoutGuide type="bottom" id="hNX-1I-RYj"/>

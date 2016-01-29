@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Search-->
         <scene sceneID="Scb-O2-UPW">
             <objects>
                 <viewController id="sgT-er-E9m" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="iMn-9o-uil"/>
+                    <tabBarItem key="tabBarItem" title="Search" id="iMn-9o-uil"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="r59-Lk-mfF" id="p2L-7q-gYQ"/>
                     </connections>
@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="746" y="-1738"/>
         </scene>
-        <!--Item-->
+        <!--Feed-->
         <scene sceneID="MPI-Q2-gGD">
             <objects>
                 <tableViewController id="asi-SV-0hO" sceneMemberID="viewController">
@@ -67,13 +67,13 @@
                             <outlet property="delegate" destination="asi-SV-0hO" id="EZl-uX-IbR"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="ftV-2F-7dU"/>
+                    <tabBarItem key="tabBarItem" title="Feed" id="ftV-2F-7dU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6v-IY-rWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-1063"/>
         </scene>
-        <!--First-->
+        <!--Shower-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,13 +107,13 @@
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Shower" image="first" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Second-->
+        <!--Profile-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
@@ -147,13 +147,13 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="k40-5F-5l9">
             <objects>
                 <viewController id="JVm-fe-0c9" sceneMemberID="viewController">
@@ -166,7 +166,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="WAF-uK-xeG"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="WAF-uK-xeG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXm-Nz-O0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

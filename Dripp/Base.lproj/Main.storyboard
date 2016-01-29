@@ -34,35 +34,6 @@
             </objects>
             <point key="canvasLocation" x="746" y="-1738"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="Jlh-tk-ItW">
-            <objects>
-                <tableViewController id="pfp-2H-ETb" customClass="FeedViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZEA-1P-0q7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TIr-xU-JQM">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TIr-xU-JQM" id="HRv-6l-IxE">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="pfp-2H-ETb" id="9Ls-pp-dlJ"/>
-                            <outlet property="delegate" destination="pfp-2H-ETb" id="mfa-JR-YXV"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="MPm-IJ-Bdw"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bGO-Pz-1EM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1566" y="-1059"/>
-        </scene>
         <!--Feed-->
         <scene sceneID="F1R-aq-xlF">
             <objects>
@@ -73,12 +44,41 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="pfp-2H-ETb" kind="relationship" relationship="rootViewController" id="ufO-Fe-ahA"/>
+                        <segue destination="kKf-et-v9J" kind="relationship" relationship="rootViewController" id="ydO-Wu-ESP"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5SN-yW-FQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="746" y="-1059"/>
+        </scene>
+        <!--Feed View Controller-->
+        <scene sceneID="VNP-dJ-6T0">
+            <objects>
+                <tableViewController id="kKf-et-v9J" customClass="FeedViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TFh-1m-9Co">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UeC-Yj-dda">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UeC-Yj-dda" id="E3N-2x-pVZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kKf-et-v9J" id="3K4-ex-oSN"/>
+                            <outlet property="delegate" destination="kKf-et-v9J" id="cnQ-Te-TfH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="bkh-cp-qV1"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NA3-dV-QXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1416" y="-1059"/>
         </scene>
         <!--Shower-->
         <scene sceneID="hNz-n2-bh7">

@@ -22,6 +22,11 @@
 		5492EC1A1C5BEFD600A97F06 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 5492EC191C5BEFD600A97F06 /* Podfile */; };
 		5492EC1C1C5BF64F00A97F06 /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5492EC1B1C5BF64F00A97F06 /* sample.mp3 */; };
 		5492EC1F1C5BF95400A97F06 /* Drippers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC1E1C5BF95400A97F06 /* Drippers.swift */; };
+		5492EC211C5C04AC00A97F06 /* FeedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC201C5C04AC00A97F06 /* FeedTableView.swift */; };
+		5492EC231C5C04ED00A97F06 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC221C5C04ED00A97F06 /* FeedCell.swift */; };
+		5492EC251C5C052100A97F06 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC241C5C052100A97F06 /* Colors.swift */; };
+		5492EC281C5C143700A97F06 /* compass_spinner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5492EC261C5C143700A97F06 /* compass_spinner@2x.png */; };
+		5492EC291C5C143700A97F06 /* compass_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5492EC271C5C143700A97F06 /* compass_background@2x.png */; };
 		61489BC45D92687FCC10AD2A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A333912402514296D82CBFD /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +70,11 @@
 		5492EC191C5BEFD600A97F06 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5492EC1B1C5BF64F00A97F06 /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
 		5492EC1E1C5BF95400A97F06 /* Drippers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drippers.swift; sourceTree = "<group>"; };
+		5492EC201C5C04AC00A97F06 /* FeedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableView.swift; sourceTree = "<group>"; };
+		5492EC221C5C04ED00A97F06 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		5492EC241C5C052100A97F06 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		5492EC261C5C143700A97F06 /* compass_spinner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass_spinner@2x.png"; sourceTree = "<group>"; };
+		5492EC271C5C143700A97F06 /* compass_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass_background@2x.png"; sourceTree = "<group>"; };
 		89AC20D05B519CBA808E268B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8A333912402514296D82CBFD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -125,11 +135,16 @@
 				5492EC0D1C5B2EA800A97F06 /* SettingsViewController.swift */,
 				5492EC131C5B2EEF00A97F06 /* SearchViewController.swift */,
 				5492EC0F1C5B2EB500A97F06 /* ShowerViewController.swift */,
+				5492EC241C5C052100A97F06 /* Colors.swift */,
 				5492EC111C5B2ECE00A97F06 /* ProfileViewController.swift */,
 				5492EC1E1C5BF95400A97F06 /* Drippers.swift */,
 				5492EC151C5B354500A97F06 /* PlayerViewController.swift */,
+				5492EC261C5C143700A97F06 /* compass_spinner@2x.png */,
+				5492EC271C5C143700A97F06 /* compass_background@2x.png */,
 				5492EC1D1C5BF67E00A97F06 /* Audio Files */,
 				5492EC0B1C5B2E9700A97F06 /* FeedViewController.swift */,
+				5492EC201C5C04AC00A97F06 /* FeedTableView.swift */,
+				5492EC221C5C04ED00A97F06 /* FeedCell.swift */,
 				5492EBE11C5B271600A97F06 /* Main.storyboard */,
 				5492EBE41C5B271600A97F06 /* Assets.xcassets */,
 				5492EBE61C5B271600A97F06 /* LaunchScreen.storyboard */,
@@ -292,7 +307,9 @@
 				5492EC1A1C5BEFD600A97F06 /* Podfile in Resources */,
 				5492EBE81C5B271600A97F06 /* LaunchScreen.storyboard in Resources */,
 				5492EBE51C5B271600A97F06 /* Assets.xcassets in Resources */,
+				5492EC281C5C143700A97F06 /* compass_spinner@2x.png in Resources */,
 				5492EBE31C5B271600A97F06 /* Main.storyboard in Resources */,
+				5492EC291C5C143700A97F06 /* compass_background@2x.png in Resources */,
 				5492EC1C1C5BF64F00A97F06 /* sample.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,12 +384,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5492EC101C5B2EB500A97F06 /* ShowerViewController.swift in Sources */,
+				5492EC251C5C052100A97F06 /* Colors.swift in Sources */,
+				5492EC231C5C04ED00A97F06 /* FeedCell.swift in Sources */,
 				5492EC141C5B2EEF00A97F06 /* SearchViewController.swift in Sources */,
 				5492EC1F1C5BF95400A97F06 /* Drippers.swift in Sources */,
 				5492EBDC1C5B271600A97F06 /* AppDelegate.swift in Sources */,
 				5492EC161C5B354500A97F06 /* PlayerViewController.swift in Sources */,
 				5492EC0C1C5B2E9700A97F06 /* FeedViewController.swift in Sources */,
 				5492EC121C5B2ECE00A97F06 /* ProfileViewController.swift in Sources */,
+				5492EC211C5C04AC00A97F06 /* FeedTableView.swift in Sources */,
 				5492EC0E1C5B2EA800A97F06 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

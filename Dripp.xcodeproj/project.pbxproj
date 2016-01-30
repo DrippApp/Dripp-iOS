@@ -29,6 +29,8 @@
 		5492EC2F1C5C2A2D00A97F06 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC2E1C5C2A2D00A97F06 /* Song.swift */; };
 		5492EC311C5C735100A97F06 /* shower.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5492EC301C5C735100A97F06 /* shower.mp3 */; };
 		5492EC351C5C77CE00A97F06 /* WaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC341C5C77CE00A97F06 /* WaterView.m */; };
+		5492EC3A1C5CA8D700A97F06 /* ChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC391C5CA8D700A97F06 /* ChallengesViewController.swift */; };
+		5492EC3C1C5CBD2A00A97F06 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC3B1C5CBD2A00A97F06 /* FriendsCell.swift */; };
 		61489BC45D92687FCC10AD2A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A333912402514296D82CBFD /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,8 @@
 		5492EC321C5C77CE00A97F06 /* Dripp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dripp-Bridging-Header.h"; sourceTree = "<group>"; };
 		5492EC331C5C77CE00A97F06 /* WaterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterView.h; sourceTree = "<group>"; };
 		5492EC341C5C77CE00A97F06 /* WaterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterView.m; sourceTree = "<group>"; };
+		5492EC391C5CA8D700A97F06 /* ChallengesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengesViewController.swift; sourceTree = "<group>"; };
+		5492EC3B1C5CBD2A00A97F06 /* FriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
 		89AC20D05B519CBA808E268B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8A333912402514296D82CBFD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -141,6 +145,7 @@
 				5492EC0D1C5B2EA800A97F06 /* SettingsViewController.swift */,
 				5492EC131C5B2EEF00A97F06 /* SearchViewController.swift */,
 				5492EC2C1C5C206400A97F06 /* FriendsViewController.swift */,
+				5492EC3B1C5CBD2A00A97F06 /* FriendsCell.swift */,
 				5492EC0F1C5B2EB500A97F06 /* ShowerViewController.swift */,
 				5492EC241C5C052100A97F06 /* Colors.swift */,
 				5492EC2E1C5C2A2D00A97F06 /* Song.swift */,
@@ -148,6 +153,7 @@
 				5492EC1E1C5BF95400A97F06 /* Dripper.swift */,
 				5492EC2A1C5C1D8200A97F06 /* UIImageColors.swift */,
 				5492EC151C5B354500A97F06 /* PlayerViewController.swift */,
+				5492EC391C5CA8D700A97F06 /* ChallengesViewController.swift */,
 				5492EC0B1C5B2E9700A97F06 /* FeedViewController.swift */,
 				5492EC221C5C04ED00A97F06 /* FeedCell.swift */,
 				5492EBE11C5B271600A97F06 /* Main.storyboard */,
@@ -401,11 +407,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5492EC101C5B2EB500A97F06 /* ShowerViewController.swift in Sources */,
+				5492EC3A1C5CA8D700A97F06 /* ChallengesViewController.swift in Sources */,
 				5492EC2B1C5C1D8200A97F06 /* UIImageColors.swift in Sources */,
 				5492EC251C5C052100A97F06 /* Colors.swift in Sources */,
 				5492EC231C5C04ED00A97F06 /* FeedCell.swift in Sources */,
 				5492EC2D1C5C206400A97F06 /* FriendsViewController.swift in Sources */,
 				5492EC141C5B2EEF00A97F06 /* SearchViewController.swift in Sources */,
+				5492EC3C1C5CBD2A00A97F06 /* FriendsCell.swift in Sources */,
 				5492EC1F1C5BF95400A97F06 /* Dripper.swift in Sources */,
 				5492EBDC1C5B271600A97F06 /* AppDelegate.swift in Sources */,
 				5492EC161C5B354500A97F06 /* PlayerViewController.swift in Sources */,

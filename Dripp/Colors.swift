@@ -52,6 +52,24 @@ extension UIColor {
         }
     }
     
+    class var feedPurple:UIColor {
+        get {
+            return UIColor(hexString: "#8493CB")
+        }
+    }
+    
+    class var feedGreen:UIColor {
+        get {
+            return UIColor(hexString: "#7DB171")
+        }
+    }
+    
+    class var feedPink:UIColor {
+        get {
+            return UIColor(hexString: "#D9BAC7")
+        }
+    }
+    
     
     // Creates a UIColor from a Hex string.
     convenience init(hexString: String) {

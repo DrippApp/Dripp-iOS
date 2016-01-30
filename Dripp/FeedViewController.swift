@@ -39,7 +39,8 @@ class FeedViewController: UITableViewController {
     }
     
     func notificationsButtonPressed() {
-        print("shower head pressed")
+        let VC1 = self.storyboard!.instantiateViewControllerWithIdentifier("challenges") as! ChallengesViewController
+        self.navigationController!.pushViewController(VC1, animated: true)
     }
     
     func setupRefreshControl() {
@@ -226,12 +227,28 @@ class FeedViewController: UITableViewController {
         return 20
     }
     
+    func randomNumber(range: Range<Int> = 1...3) -> Int {
+        let min = range.startIndex
+        let max = range.endIndex
+        return Int(arc4random_uniform(UInt32(max - min))) + min
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let CellIdentifier = "Cell";
+        let CellIdentifier = "FeedCell";
         
-        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
+        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath) as! FeedCell
         
-        cell.textLabel?.text = "Row \(indexPath.row)"
+        cell.photo.image = UIImage(named: "shower")
+        cell.info.text = "I like to do things"
+        cell.timestamp.text = "10 minutes ago"
+        let random = randomNumber()
+        if random == 1 {
+            cell.backgroundColor = UIColor.feedGreen
+        } else if random == 2 {
+            cell.backgroundColor = UIColor.feedPink
+        } else {
+            cell.backgroundColor = UIColor.feedPurple
+        }
         
         return cell
     }

@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+import Haneke
 
 class FriendsViewController: UITableViewController {
     
@@ -26,7 +27,7 @@ class FriendsViewController: UITableViewController {
     }
     
     func loadFriends() {
-        Alamofire.request(.GET, "http://api.dripp.xyz/users",
+        Alamofire.request(.GET, "http://api.dripp.xyz/user/16/connections",
             parameters: ["api": true])
             .responseJSON { response in
                 if response.result.isSuccess {
@@ -55,20 +56,31 @@ class FriendsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let CellIdentifier = "Friends";
+        let CellIdentifier = "FriendCell";
         
-        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
+        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath) as! FriendCell
+        cell.name.text = ""
+        cell.photo.image = UIImage(named: "placeholder")
         
-        let dripper = friends[indexPath.row]
+        let friend = self.friends[indexPath.row]
         
-        cell.textLabel?.text = "\(dripper.firstName) \(dripper.lastName)"
-        
+        cell.photo.hnk_setImageFromURL(NSURL(string: friend.photo)!)
+        cell.name.text = "\(friend.firstName) \(friend.lastName)"
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
-
     
+    
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let challenge = UITableViewRowAction(style: .Normal, title: "Challenge") { action, index in
+            print("challenge button tapped")
+        }
+        challenge.backgroundColor = UIColor.blueHeader
+        
+        
+        return [challenge]
+    }
 }

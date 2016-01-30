@@ -64,13 +64,6 @@ class PlayerViewController: UIViewController {
         
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
-        
-    }
-    
     func stringFromTimeInterval(interval: NSTimeInterval) -> String {
         let interval = Int(interval)
         let seconds = interval % 60

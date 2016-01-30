@@ -10,6 +10,12 @@ import UIKit
 
 extension UIColor {
     
+    class var blueHeader:UIColor {
+        get {
+            return UIColor(hexString: "#2696BA")
+        }
+    }
+    
     class var blue1:UIColor {
         get {
             return UIColor(hexString: "#128ef2")

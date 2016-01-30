@@ -215,15 +215,21 @@
                                             <action selector="playOrPauseMusic:" destination="wfa-VF-L4L" eventType="touchUpInside" id="2EO-wu-bXN"/>
                                         </connections>
                                     </button>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="O5L-DU-PW1">
+                                        <rect key="frame" x="8" y="326" width="238" height="2"/>
+                                    </progressView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="3zz-Iy-ClY"/>
                                     <constraint firstItem="CN2-Ep-jzg" firstAttribute="centerX" secondItem="fIQ-1l-Mxp" secondAttribute="centerX" id="5kV-mM-HwZ"/>
                                     <constraint firstItem="wfu-gj-qNG" firstAttribute="centerX" secondItem="fIQ-1l-Mxp" secondAttribute="centerX" id="CKa-HM-shr"/>
+                                    <constraint firstItem="O5L-DU-PW1" firstAttribute="top" secondItem="H4o-e4-bFA" secondAttribute="bottom" constant="8" id="CoF-Xf-uYB"/>
                                     <constraint firstAttribute="width" constant="254" id="KEH-h1-RgC"/>
+                                    <constraint firstItem="O5L-DU-PW1" firstAttribute="leading" secondItem="fIQ-1l-Mxp" secondAttribute="leading" constant="8" id="Ovu-B4-5mr"/>
                                     <constraint firstItem="H4o-e4-bFA" firstAttribute="top" secondItem="CN2-Ep-jzg" secondAttribute="bottom" constant="1" id="Thl-UX-oq7"/>
                                     <constraint firstItem="H4o-e4-bFA" firstAttribute="centerX" secondItem="fIQ-1l-Mxp" secondAttribute="centerX" id="Trm-3m-2e4"/>
                                     <constraint firstItem="wfu-gj-qNG" firstAttribute="top" secondItem="H4o-e4-bFA" secondAttribute="bottom" constant="8" id="n8F-gq-3Az"/>
+                                    <constraint firstAttribute="trailing" secondItem="O5L-DU-PW1" secondAttribute="trailing" constant="8" id="rsJ-1V-wJP"/>
                                     <constraint firstAttribute="bottom" secondItem="wfu-gj-qNG" secondAttribute="bottom" constant="26" id="xOb-3y-qCr"/>
                                 </constraints>
                             </view>
@@ -267,6 +273,7 @@
                         <outlet property="bottomView" destination="bov-Rd-ago" id="ggt-ip-ZJG"/>
                         <outlet property="playPauseButton" destination="wfu-gj-qNG" id="fEV-Kc-vHE"/>
                         <outlet property="playedTime" destination="M1O-fb-jZu" id="J0E-AK-wOl"/>
+                        <outlet property="progressBar" destination="O5L-DU-PW1" id="VXP-rt-2DL"/>
                         <outlet property="stopButton" destination="0li-ef-ptI" id="Ge0-4D-Ov0"/>
                         <outlet property="trackTitle" destination="CN2-Ep-jzg" id="61j-I7-Idl"/>
                     </connections>

@@ -17,7 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        UINavigationBar.appearance().backgroundColor = UIColor.blue1
+        UINavigationBar.appearance().barTintColor = UIColor.blueHeader
+        UIToolbar.appearance().barTintColor = UIColor.blueHeader
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UIToolbar.appearance().tintColor = UIColor.blueHeader
+        UITabBar.appearance().barTintColor = UIColor.blueHeader
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.blue3], forState: .Normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.whiteColor()], forState: .Selected)
+        
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         
         return true
     }

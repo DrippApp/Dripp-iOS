@@ -14,57 +14,44 @@ class PlayerViewController: UIViewController {
     
     
     var audioPlayer : AVAudioPlayer?
+    var playlist = [Song]()
     var isPlaying = false
     var timer:NSTimer!
+    var progress:NSTimer!
+    var currentPlayingSong = 0 {
+        didSet{
+            //when a song is over this will increase
+            //Then it will play next song
+            if currentPlayingSong < playlist.count {
+                playSong(playlist[currentPlayingSong])
+            } else {
+                currentPlayingSong = 0
+            }
+        }
+    }
     @IBOutlet weak var trackTitle: UILabel!
     @IBOutlet weak var playedTime: UILabel!
     @IBOutlet weak var albumName: UILabel!
-    var playlist = [Song]()
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var albumArtwork: UIImageView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var backgroundImage: SABlurImageView!
     
+    @IBOutlet weak var progressBar: UIProgressView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Create playlist
         loadPlaylist()
-        trackTitle.text = playlist[0].name
-        albumName.text = playlist[0].album
-        stopButton.setTitle("Cancel", forState: .Normal)
+        //Play first song
+        playSong(playlist[0])
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
         
-        if let audio = self.setupAudioPlayerWithFile(playlist[0].file, type:"mp3") {
-            self.audioPlayer = audio
-        }
-        let album = UIImage(named: playlist[0].albumArtwork)
-        albumArtwork.image = album
-        //add blur
-        backgroundImage.image = album
-        backgroundImage.addBlurEffect(30, times: 1)
-        let colors = album!.getColors()
-        let albumColor = colors.backgroundColor
-        //let altAlbumColor = albumColor.adjust(0.2, green: 0.2, blue: 0.2, alpha: 0)
-        bottomView.backgroundColor = albumColor
-        self.view.backgroundColor = albumColor
-        
-        if albumColor.isLight() {
-            playedTime.textColor = UIColor.blackColor()
-            stopButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        } else {
-            playedTime.textColor = UIColor.whiteColor()
-            stopButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        }
-        
-        if albumColor.isLight() {
-            trackTitle.textColor = UIColor.blackColor()
-            albumName.textColor = UIColor.blackColor()
-            playPauseButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        } else {
-            trackTitle.textColor = UIColor.whiteColor()
-            albumName.textColor = UIColor.whiteColor()
-            playPauseButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        }
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
         
     }
     
@@ -115,13 +102,68 @@ class PlayerViewController: UIViewController {
     
     func updateTime() {
         let currentTime = Int(audioPlayer!.currentTime)
+        let duration = Int(audioPlayer!.duration)
         let minutes = currentTime/60
         let seconds = currentTime - minutes * 60
-        
+        let percentage = Float(currentTime) / Float(duration)
         playedTime.text = NSString(format: "%02d:%02d", minutes,seconds) as String
+        
+        if currentTime == duration {
+            currentPlayingSong++
+        }
+        
+        progressBar.setProgress(percentage, animated: true)
     }
     
     func loadPlaylist() {
         playlist.append(Song(name: "Drake's Best Song", albumArtwork: "drake", id: 1, duration: 32, file: "sample", album: "Drake's Great Album"))
+        playlist.append(Song(name: "Drake's Best Song2", albumArtwork: "drake", id: 1, duration: 32, file: "sample", album: "Drake's Great Album2"))
+    }
+    
+    func playSong(song: Song) {
+        trackTitle.text = song.name
+        albumName.text = song.album
+        stopButton.setTitle("Cancel", forState: .Normal)
+        progressBar.setProgress(0, animated: false)
+        
+        if let audio = self.setupAudioPlayerWithFile(song.file, type:"mp3") {
+            self.audioPlayer = audio
+        }
+        let album = UIImage(named: song.albumArtwork)
+        albumArtwork.image = album
+        //add blur
+        backgroundImage.image = album
+        backgroundImage.addBlurEffect(30, times: 10)
+        let colors = album!.getColors()
+        let albumColor = colors.backgroundColor
+        //let altAlbumColor = albumColor.adjust(0.2, green: 0.2, blue: 0.2, alpha: 0)
+        bottomView.backgroundColor = albumColor
+        self.view.backgroundColor = albumColor
+        
+        albumArtwork.layer.borderWidth = 1
+        albumArtwork.layer.borderColor = UIColor.clearColor().CGColor
+        albumArtwork.layer.cornerRadius = albumArtwork.frame.height/2
+        albumArtwork.layer.masksToBounds = false
+        albumArtwork.clipsToBounds = true
+        
+        if albumColor.isLight() {
+            playedTime.textColor = UIColor.blackColor()
+            stopButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        } else {
+            playedTime.textColor = UIColor.whiteColor()
+            stopButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        }
+        
+        if albumColor.isLight() {
+            UIApplication.sharedApplication().statusBarStyle = .LightContent
+            trackTitle.textColor = UIColor.blackColor()
+            albumName.textColor = UIColor.blackColor()
+            playPauseButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        } else {
+            trackTitle.textColor = UIColor.whiteColor()
+            albumName.textColor = UIColor.whiteColor()
+            playPauseButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        }
+
     }
 }

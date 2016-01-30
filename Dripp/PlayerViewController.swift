@@ -17,17 +17,49 @@ class PlayerViewController: UIViewController {
     var timer:NSTimer!
     @IBOutlet weak var trackTitle: UILabel!
     @IBOutlet weak var playedTime: UILabel!
+    @IBOutlet weak var albumName: UILabel!
+    var playlist = [Song]()
+    @IBOutlet weak var playPauseButton: UIButton!
+    @IBOutlet weak var albumArtwork: UIImageView!
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var stopButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        trackTitle.text = "Testing song"
+        loadPlaylist()
+        trackTitle.text = playlist[0].name
+        albumName.text = playlist[0].album
+        stopButton.setTitle("Cancel", forState: .Normal)
         
-        if let audio = self.setupAudioPlayerWithFile("sample", type:"mp3") {
+        if let audio = self.setupAudioPlayerWithFile(playlist[0].file, type:"mp3") {
             self.audioPlayer = audio
         }
+        let album = UIImage(named: playlist[0].albumArtwork)
+        albumArtwork.image = album
+        let colors = album!.getColors()
+        let albumColor = colors.backgroundColor
+        let altAlbumColor = albumColor.adjust(0.2, green: 0.2, blue: 0.2, alpha: 0)
+        bottomView.backgroundColor = altAlbumColor
+        self.view.backgroundColor = albumColor
         
-        trackTitle.text = stringFromTimeInterval(audioPlayer!.duration)
+        if albumColor.isLight() {
+            playedTime.textColor = UIColor.blackColor()
+            stopButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        } else {
+            playedTime.textColor = UIColor.whiteColor()
+            stopButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        }
+        
+        if altAlbumColor.isLight() {
+            trackTitle.textColor = UIColor.blackColor()
+            albumName.textColor = UIColor.blackColor()
+            playPauseButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        } else {
+            trackTitle.textColor = UIColor.whiteColor()
+            albumName.textColor = UIColor.whiteColor()
+            playPauseButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        }
         
     }
     
@@ -54,12 +86,15 @@ class PlayerViewController: UIViewController {
     }
     
     @IBAction func playOrPauseMusic(sender: AnyObject) {
+        stopButton.setTitle("Stop", forState: .Normal)
         if isPlaying {
             audioPlayer?.pause()
             isPlaying = false
+            playPauseButton.setTitle("Play", forState: .Normal)
         } else {
             audioPlayer?.play()
             isPlaying = true
+            playPauseButton.setTitle("Pause", forState: .Normal)
             
             timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateTime", userInfo: nil, repeats: true)
         }
@@ -81,9 +116,7 @@ class PlayerViewController: UIViewController {
         playedTime.text = NSString(format: "%02d:%02d", minutes,seconds) as String
     }
     
-    @IBAction func stopMusic(sender: AnyObject) {
-        audioPlayer?.stop()
-        audioPlayer?.currentTime = 0
-        isPlaying = false
+    func loadPlaylist() {
+        playlist.append(Song(name: "Drake's Best Song", albumArtwork: "drake", id: 1, duration: 32, file: "sample", album: "Drake's Great Album"))
     }
 }

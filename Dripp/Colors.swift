@@ -65,4 +65,26 @@ extension UIColor {
         }
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
+    
+    func adjust(red: CGFloat, green: CGFloat, blue: CGFloat, alpha:CGFloat) -> UIColor{
+        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+        self.getRed(&r, green: &g, blue: &b, alpha: &a)
+        return UIColor(red: r+red, green: g+green, blue: b+blue, alpha: a+alpha)
+    }
+    
+    // Checks if a color is light or not
+    func isLight() -> Bool
+    {
+        let components = CGColorGetComponents(self.CGColor)
+        let brightness = (((components[0] * 299.0) as CGFloat) + ((components[1] * 587.0) as CGFloat) + ((components[2] * 114.0)) as CGFloat) / (1000.0 as CGFloat)
+        
+        if brightness < 0.5
+        {
+            return false
+        }
+        else
+        {
+            return true
+        }
+    }
 }

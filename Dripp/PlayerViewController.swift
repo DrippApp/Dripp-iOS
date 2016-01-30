@@ -116,8 +116,7 @@ class PlayerViewController: UIViewController {
     }
     
     func loadPlaylist() {
-        playlist.append(Song(name: "Drake's Best Song", albumArtwork: "drake", id: 1, duration: 32, file: "sample", album: "Drake's Great Album"))
-        playlist.append(Song(name: "Drake's Best Song2", albumArtwork: "drake", id: 1, duration: 32, file: "sample", album: "Drake's Great Album2"))
+        playlist.append(Song(name: "Shower", albumArtwork: "shower", id: 1, duration: 32, file: "shower", album: "Becky G"))
     }
     
     func playSong(song: Song) {
@@ -133,9 +132,10 @@ class PlayerViewController: UIViewController {
         albumArtwork.image = album
         //add blur
         backgroundImage.image = album
-        backgroundImage.addBlurEffect(30, times: 10)
-        let colors = album!.getColors()
-        let albumColor = colors.backgroundColor
+        backgroundImage.addBlurEffect(30, times: 20)
+        //let colors = album!.getColors()
+        //let albumColor = colors.backgroundColor
+        let albumColor = UIColor(hexString: "#E83939")
         //let altAlbumColor = albumColor.adjust(0.2, green: 0.2, blue: 0.2, alpha: 0)
         bottomView.backgroundColor = albumColor
         self.view.backgroundColor = albumColor

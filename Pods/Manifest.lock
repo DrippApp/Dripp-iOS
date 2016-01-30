@@ -1,13 +1,16 @@
 PODS:
   - Alamofire (3.1.5)
+  - SABlurImageView (2.1.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire
+  - SABlurImageView
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
+  SABlurImageView: 869da4e0b80e60b21b05d98509de98d0221c15d5
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

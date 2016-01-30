@@ -8,6 +8,7 @@
 
 import AVFoundation
 import UIKit
+import SABlurImageView
 
 class PlayerViewController: UIViewController {
     
@@ -23,6 +24,7 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var albumArtwork: UIImageView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet weak var backgroundImage: SABlurImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +39,13 @@ class PlayerViewController: UIViewController {
         }
         let album = UIImage(named: playlist[0].albumArtwork)
         albumArtwork.image = album
+        //add blur
+        backgroundImage.image = album
+        backgroundImage.addBlurEffect(30, times: 1)
         let colors = album!.getColors()
         let albumColor = colors.backgroundColor
-        let altAlbumColor = albumColor.adjust(0.2, green: 0.2, blue: 0.2, alpha: 0)
-        bottomView.backgroundColor = altAlbumColor
+        //let altAlbumColor = albumColor.adjust(0.2, green: 0.2, blue: 0.2, alpha: 0)
+        bottomView.backgroundColor = albumColor
         self.view.backgroundColor = albumColor
         
         if albumColor.isLight() {
@@ -51,7 +56,7 @@ class PlayerViewController: UIViewController {
             stopButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         }
         
-        if altAlbumColor.isLight() {
+        if albumColor.isLight() {
             trackTitle.textColor = UIColor.blackColor()
             albumName.textColor = UIColor.blackColor()
             playPauseButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)

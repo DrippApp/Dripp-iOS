@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '715CF93095349DD4D203F588'
-               BlueprintName = 'SwiftyJSON'
+               BlueprintIdentifier = 'A601ABC06CE131614891E202'
+               BlueprintName = 'SABlurImageView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftyJSON.framework'>
+               BuildableName = 'SABlurImageView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

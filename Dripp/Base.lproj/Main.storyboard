@@ -154,6 +154,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gaX-9N-WwW" customClass="SABlurImageView" customModule="SABlurImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tev-Ww-Bp0">
+                                <rect key="frame" x="0.0" y="25" width="600" height="551"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bov-Rd-ago">
                                 <rect key="frame" x="0.0" y="473" width="600" height="78"/>
                                 <subviews>
@@ -244,10 +247,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bov-Rd-ago" firstAttribute="leading" secondItem="LTy-n7-yvf" secondAttribute="leadingMargin" constant="-20" id="8V1-1u-PL4"/>
+                            <constraint firstItem="guR-aR-3uS" firstAttribute="top" secondItem="Tev-Ww-Bp0" secondAttribute="bottom" constant="-25" id="COQ-NW-Pat"/>
                             <constraint firstItem="gaX-9N-WwW" firstAttribute="centerX" secondItem="LTy-n7-yvf" secondAttribute="centerX" id="Djv-zy-BYp"/>
                             <constraint firstItem="gaX-9N-WwW" firstAttribute="top" secondItem="97y-a8-jtD" secondAttribute="bottom" constant="-20" id="EnX-39-15i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tev-Ww-Bp0" secondAttribute="trailing" constant="-20" id="IQi-kX-h1H"/>
                             <constraint firstItem="fIQ-1l-Mxp" firstAttribute="centerX" secondItem="LTy-n7-yvf" secondAttribute="centerX" id="LPb-ds-HL0"/>
                             <constraint firstItem="CN2-Ep-jzg" firstAttribute="top" secondItem="vhb-CI-yE3" secondAttribute="bottom" constant="7" id="NFH-ms-8Sn"/>
+                            <constraint firstItem="Tev-Ww-Bp0" firstAttribute="top" secondItem="97y-a8-jtD" secondAttribute="bottom" constant="5" id="VQg-Uz-wzx"/>
                             <constraint firstItem="gaX-9N-WwW" firstAttribute="leading" secondItem="LTy-n7-yvf" secondAttribute="leadingMargin" constant="-20" id="auG-MQ-JDE"/>
                             <constraint firstItem="guR-aR-3uS" firstAttribute="top" secondItem="bov-Rd-ago" secondAttribute="bottom" id="b7M-hQ-qq5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bov-Rd-ago" secondAttribute="trailing" constant="-20" id="bEy-hK-KCF"/>
@@ -256,6 +262,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="gaX-9N-WwW" secondAttribute="trailing" constant="-20" id="mJF-fG-os2"/>
                             <constraint firstItem="vhb-CI-yE3" firstAttribute="centerX" secondItem="fIQ-1l-Mxp" secondAttribute="centerX" id="u5e-ou-AAd"/>
                             <constraint firstItem="fIQ-1l-Mxp" firstAttribute="centerY" secondItem="LTy-n7-yvf" secondAttribute="centerY" constant="-67" id="vH4-HX-1lX"/>
+                            <constraint firstItem="Tev-Ww-Bp0" firstAttribute="leading" secondItem="LTy-n7-yvf" secondAttribute="leadingMargin" constant="-20" id="wX2-WN-kbQ"/>
                             <constraint firstItem="gaX-9N-WwW" firstAttribute="centerY" secondItem="LTy-n7-yvf" secondAttribute="centerY" id="xC0-zk-0OX"/>
                         </constraints>
                         <variation key="default">
@@ -271,6 +278,7 @@
                         <outlet property="albumName" destination="H4o-e4-bFA" id="kvs-lj-FQ8"/>
                         <outlet property="backgroundImage" destination="gaX-9N-WwW" id="Tya-lC-fyO"/>
                         <outlet property="bottomView" destination="bov-Rd-ago" id="ggt-ip-ZJG"/>
+                        <outlet property="gifBackground" destination="Tev-Ww-Bp0" id="wQl-0a-CM7"/>
                         <outlet property="playPauseButton" destination="wfu-gj-qNG" id="fEV-Kc-vHE"/>
                         <outlet property="playedTime" destination="M1O-fb-jZu" id="J0E-AK-wOl"/>
                         <outlet property="progressBar" destination="O5L-DU-PW1" id="VXP-rt-2DL"/>
@@ -307,28 +315,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drop" translatesAutoresizingMaskIntoConstraints="NO" id="Wpf-G6-xWK">
-                                <rect key="frame" x="284" y="47" width="32" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="ag1-5N-eYV"/>
-                                    <constraint firstAttribute="height" constant="75" id="tJv-9h-Owo"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="Wpf-G6-xWK" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="27" id="EgS-8b-tD6"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
-                            <constraint firstItem="Wpf-G6-xWK" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="rX0-4Y-dQu"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="second" id="cPa-gy-q4n"/>
-                    <connections>
-                        <outlet property="drop" destination="Wpf-G6-xWK" id="BV1-7h-9FU"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -378,7 +374,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="drop" width="464" height="677"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>

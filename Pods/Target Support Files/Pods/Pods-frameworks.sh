@@ -87,11 +87,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/Alamofire.framework"
   install_framework "Pods/EasyAnimation.framework"
   install_framework "Pods/SABlurImageView.framework"
+  install_framework "Pods/SwiftGifOrigin.framework"
   install_framework "Pods/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/Alamofire.framework"
   install_framework "Pods/EasyAnimation.framework"
   install_framework "Pods/SABlurImageView.framework"
+  install_framework "Pods/SwiftGifOrigin.framework"
   install_framework "Pods/SwiftyJSON.framework"
 fi

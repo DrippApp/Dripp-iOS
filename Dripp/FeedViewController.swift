@@ -12,7 +12,7 @@ class FeedViewController: UITableViewController {
     
     let notificationButton = UIButton(type: .Custom)
     let showerImage = UIImage(named:"showerhead")
-    let showerWaterImage = UIImage(named:"test")
+    let showerWaterImage = UIImage(named:"showerheadwater")
     
     var refreshLoadingView : UIView!
     var refreshColorView : UIView!

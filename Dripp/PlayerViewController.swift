@@ -10,6 +10,7 @@ import AVFoundation
 import UIKit
 import SABlurImageView
 import SpriteKit
+import SwiftGifOrigin
 
 class PlayerViewController: UIViewController {
     
@@ -20,6 +21,7 @@ class PlayerViewController: UIViewController {
     var isPlaying = false
     var timer:NSTimer!
     var progress:NSTimer!
+    @IBOutlet weak var gifBackground: UIImageView!
     var currentPlayingSong = 0 {
         didSet{
             //when a song is over this will increase
@@ -56,6 +58,9 @@ class PlayerViewController: UIViewController {
         self.view.insertSubview(waterView, aboveSubview: backgroundImage)
         //Play first song
         playSong(playlist[0])
+        
+        // Put in gif
+        gifBackground.image = UIImage.gifWithName("drops")
         
     }
     

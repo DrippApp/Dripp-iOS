@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
+import Haneke
 
 class FeedViewController: UITableViewController {
+    
+    var feed = [FeedItem]()
     
     let notificationButton = UIButton(type: .Custom)
     let showerImage = UIImage(named:"showerhead")
@@ -24,6 +29,7 @@ class FeedViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadFeed()
         //set image for button
         notificationButton.setImage(showerImage, forState: .Normal)
         //add function for button
@@ -36,6 +42,27 @@ class FeedViewController: UITableViewController {
         //register table cell
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.setupRefreshControl()
+    }
+    
+    func loadFeed() {
+        
+        Alamofire.request(.GET, "http://api.dripp.xyz/user/16/notifications",
+            parameters: ["api": true])
+            .responseJSON { response in
+                if response.result.isSuccess {
+                    if let data: AnyObject = response.result.value! {
+                        let json = JSON(data)
+                        let array = json["data"].arrayValue
+                        self.feed = array.map {
+                            FeedItem(json: $0)
+                        }
+                        print(self.feed)
+                        self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
+                    }
+                }
+        }
+
+        
     }
     
     func notificationsButtonPressed() {
@@ -224,32 +251,21 @@ class FeedViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 20
-    }
-    
-    func randomNumber(range: Range<Int> = 1...3) -> Int {
-        let min = range.startIndex
-        let max = range.endIndex
-        return Int(arc4random_uniform(UInt32(max - min))) + min
+        return feed.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let CellIdentifier = "FeedCell";
         
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath) as! FeedCell
+        cell.info.text = ""
+        cell.photo.image = UIImage(named: "placeholder")
         
-        cell.photo.image = UIImage(named: "shower")
-        cell.info.text = "I like to do things"
-        cell.timestamp.text = "10 minutes ago"
-        let random = randomNumber()
-        if random == 1 {
-            cell.backgroundColor = UIColor.feedGreen
-        } else if random == 2 {
-            cell.backgroundColor = UIColor.feedPink
-        } else {
-            cell.backgroundColor = UIColor.feedPurple
-        }
+        let feed = self.feed[indexPath.row]
         
+        cell.photo.hnk_setImageFromURL(NSURL(string: feed.photo)!)
+        cell.info.text = feed.data
         return cell
     }
     

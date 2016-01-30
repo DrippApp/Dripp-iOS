@@ -31,6 +31,7 @@
 		5492EC351C5C77CE00A97F06 /* WaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC341C5C77CE00A97F06 /* WaterView.m */; };
 		5492EC3A1C5CA8D700A97F06 /* ChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC391C5CA8D700A97F06 /* ChallengesViewController.swift */; };
 		5492EC3C1C5CBD2A00A97F06 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC3B1C5CBD2A00A97F06 /* FriendsCell.swift */; };
+		5492EC3E1C5CC97B00A97F06 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC3D1C5CC97B00A97F06 /* FeedItem.swift */; };
 		61489BC45D92687FCC10AD2A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A333912402514296D82CBFD /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		5492EC341C5C77CE00A97F06 /* WaterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterView.m; sourceTree = "<group>"; };
 		5492EC391C5CA8D700A97F06 /* ChallengesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengesViewController.swift; sourceTree = "<group>"; };
 		5492EC3B1C5CBD2A00A97F06 /* FriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
+		5492EC3D1C5CC97B00A97F06 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		89AC20D05B519CBA808E268B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8A333912402514296D82CBFD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -154,6 +156,7 @@
 				5492EC2A1C5C1D8200A97F06 /* UIImageColors.swift */,
 				5492EC151C5B354500A97F06 /* PlayerViewController.swift */,
 				5492EC391C5CA8D700A97F06 /* ChallengesViewController.swift */,
+				5492EC3D1C5CC97B00A97F06 /* FeedItem.swift */,
 				5492EC0B1C5B2E9700A97F06 /* FeedViewController.swift */,
 				5492EC221C5C04ED00A97F06 /* FeedCell.swift */,
 				5492EBE11C5B271600A97F06 /* Main.storyboard */,
@@ -409,6 +412,7 @@
 				5492EC101C5B2EB500A97F06 /* ShowerViewController.swift in Sources */,
 				5492EC3A1C5CA8D700A97F06 /* ChallengesViewController.swift in Sources */,
 				5492EC2B1C5C1D8200A97F06 /* UIImageColors.swift in Sources */,
+				5492EC3E1C5CC97B00A97F06 /* FeedItem.swift in Sources */,
 				5492EC251C5C052100A97F06 /* Colors.swift in Sources */,
 				5492EC231C5C04ED00A97F06 /* FeedCell.swift in Sources */,
 				5492EC2D1C5C206400A97F06 /* FriendsViewController.swift in Sources */,

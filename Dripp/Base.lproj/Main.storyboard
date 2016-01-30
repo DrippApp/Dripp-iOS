@@ -132,17 +132,21 @@
                                                 <constraint firstAttribute="width" constant="75" id="LzU-lT-s9Y"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWq-5o-bIk">
-                                            <rect key="frame" x="101" y="10" width="462" height="52"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some information" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWq-5o-bIk">
+                                            <rect key="frame" x="101" y="10" width="442" height="75"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="75" id="nq2-Ui-3qn"/>
+                                                <constraint firstAttribute="width" constant="442" id="zfj-lI-sfN"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCp-yI-wxH">
-                                            <rect key="frame" x="101" y="64" width="400" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCp-yI-wxH">
+                                            <rect key="frame" x="503" y="17" width="89" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="2BA-xP-OTy"/>
-                                                <constraint firstAttribute="width" constant="400" id="rTw-mT-Eux"/>
+                                                <constraint firstAttribute="width" constant="89" id="rTw-mT-Eux"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -152,17 +156,27 @@
                                     <constraints>
                                         <constraint firstItem="5ii-C5-vpP" firstAttribute="top" secondItem="E3N-2x-pVZ" secondAttribute="topMargin" constant="2" id="Ao8-u4-rRH"/>
                                         <constraint firstItem="5ii-C5-vpP" firstAttribute="leading" secondItem="E3N-2x-pVZ" secondAttribute="leadingMargin" constant="3" id="Cd0-vC-Dvj"/>
+                                        <constraint firstItem="iWq-5o-bIk" firstAttribute="leading" secondItem="5ii-C5-vpP" secondAttribute="trailing" constant="15" id="D6k-O9-QAs"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="dCp-yI-wxH" secondAttribute="bottom" constant="3" id="OVZ-aC-ba2"/>
                                         <constraint firstItem="iWq-5o-bIk" firstAttribute="top" secondItem="E3N-2x-pVZ" secondAttribute="topMargin" constant="2" id="Qb3-gs-BqD"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="dCp-yI-wxH" secondAttribute="trailing" id="Qgw-j8-1oU"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dCp-yI-wxH" secondAttribute="bottom" constant="50" id="RVF-eY-7Uv"/>
                                         <constraint firstItem="dCp-yI-wxH" firstAttribute="top" secondItem="iWq-5o-bIk" secondAttribute="bottom" constant="2" id="cQV-Dw-OEE"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="dCp-yI-wxH" secondAttribute="trailing" constant="175" id="etL-md-FJo"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="iWq-5o-bIk" secondAttribute="trailing" constant="29" id="mDN-A1-5c9"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="iWq-5o-bIk" secondAttribute="trailing" constant="49" id="tnV-OU-5Yj"/>
                                         <constraint firstItem="iWq-5o-bIk" firstAttribute="leading" secondItem="5ii-C5-vpP" secondAttribute="trailing" constant="15" id="w5B-bM-aTm"/>
+                                        <constraint firstItem="dCp-yI-wxH" firstAttribute="top" secondItem="E3N-2x-pVZ" secondAttribute="topMargin" constant="9" id="waP-zR-eJP"/>
                                         <constraint firstItem="dCp-yI-wxH" firstAttribute="leading" secondItem="5ii-C5-vpP" secondAttribute="trailing" constant="15" id="ykt-lr-889"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
+                                            <exclude reference="mDN-A1-5c9"/>
+                                            <exclude reference="w5B-bM-aTm"/>
+                                            <exclude reference="OVZ-aC-ba2"/>
+                                            <exclude reference="cQV-Dw-OEE"/>
                                             <exclude reference="etL-md-FJo"/>
+                                            <exclude reference="ykt-lr-889"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>

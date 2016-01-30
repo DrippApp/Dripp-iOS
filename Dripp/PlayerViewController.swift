@@ -11,6 +11,7 @@ import UIKit
 import SABlurImageView
 import SpriteKit
 import SwiftGifOrigin
+import EasyAnimation
 
 class PlayerViewController: UIViewController {
     
@@ -53,7 +54,7 @@ class PlayerViewController: UIViewController {
         waterView.userInteractionEnabled = true
         waterView.backgroundColor = UIColor.clearColor()
         waterView.currentWaterColor = UIColor.blueHeader.colorWithAlphaComponent(0.3)
-        waterView.percentum = 0.00
+        waterView.percentum = 0.0
         //insertSubview:aboveSubview:
         self.view.insertSubview(waterView, aboveSubview: backgroundImage)
         //Play first song
@@ -91,11 +92,11 @@ class PlayerViewController: UIViewController {
         if isPlaying {
             audioPlayer?.pause()
             isPlaying = false
-            playPauseButton.setTitle("Play", forState: .Normal)
+            playPauseButton.setImage(UIImage(named: "play"), forState: UIControlState.Normal)
         } else {
             audioPlayer?.play()
             isPlaying = true
-            playPauseButton.setTitle("Pause", forState: .Normal)
+            playPauseButton.setImage(UIImage(named: "pause"), forState: UIControlState.Normal)
             
             timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateTime", userInfo: nil, repeats: true)
         }
@@ -123,6 +124,7 @@ class PlayerViewController: UIViewController {
         
         progressBar.setProgress(percentage, animated: true)
         waterView.percentum = percentage
+        //waterView.frame = CGRectOffset( waterView.frame, 0, 10 )
     }
     
     func loadPlaylist() {

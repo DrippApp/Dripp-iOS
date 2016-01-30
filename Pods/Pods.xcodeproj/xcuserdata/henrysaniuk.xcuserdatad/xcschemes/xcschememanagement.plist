@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>EasyAnimation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1D0873F8A98A67A33F970527CA227B68</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2D0AD027C7EEEE67A7DC3E8B6AB69EE9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>86A6FDCAE36EBFB04D1F5A573BBF903E</key>
+		<key>A376E868ED408EE8EEBD1DDBCE639EF5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A005D0A5A6DBB70AD3437E56EB2C935C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FC530E9E8E908E88A14D1E5C6EEBF1A0</key>
+		<key>B45F89A7CA67F05A3DE246F7A4D882C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

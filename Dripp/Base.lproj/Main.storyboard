@@ -307,16 +307,28 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drop" translatesAutoresizingMaskIntoConstraints="NO" id="Wpf-G6-xWK">
+                                <rect key="frame" x="284" y="47" width="32" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="ag1-5N-eYV"/>
+                                    <constraint firstAttribute="height" constant="75" id="tJv-9h-Owo"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
+                            <constraint firstItem="Wpf-G6-xWK" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="27" id="EgS-8b-tD6"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="Wpf-G6-xWK" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="rX0-4Y-dQu"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="drop" destination="Wpf-G6-xWK" id="BV1-7h-9FU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -366,6 +378,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="drop" width="464" height="677"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>

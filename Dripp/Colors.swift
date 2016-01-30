@@ -12,7 +12,7 @@ extension UIColor {
     
     class var blueHeader:UIColor {
         get {
-            return UIColor(hexString: "#2696BA")
+            return UIColor(hexString: "#2196F3")
         }
     }
     

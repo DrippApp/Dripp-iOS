@@ -11,7 +11,7 @@ import UIKit
 class FeedViewController: UITableViewController {
     
     let notificationButton = UIButton(type: .Custom)
-    let showerImage = UIImage(named:"test")
+    let showerImage = UIImage(named:"showerhead")
     let showerWaterImage = UIImage(named:"test")
     
     var refreshLoadingView : UIView!
@@ -29,7 +29,7 @@ class FeedViewController: UITableViewController {
         //add function for button
         notificationButton.addTarget(self, action: "notificationsButtonPressed", forControlEvents: UIControlEvents.TouchUpInside)
         //set frame
-        notificationButton.frame = CGRectMake(0, 0, 53, 31)
+        notificationButton.frame = CGRectMake(0, 0, 35, 35)
         let barButton = UIBarButtonItem(customView: notificationButton)
         //assign button to navigationbar
         self.navigationItem.rightBarButtonItem = barButton

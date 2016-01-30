@@ -28,6 +28,7 @@
 		5492EC2D1C5C206400A97F06 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC2C1C5C206400A97F06 /* FriendsViewController.swift */; };
 		5492EC2F1C5C2A2D00A97F06 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC2E1C5C2A2D00A97F06 /* Song.swift */; };
 		5492EC311C5C735100A97F06 /* shower.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5492EC301C5C735100A97F06 /* shower.mp3 */; };
+		5492EC351C5C77CE00A97F06 /* WaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC341C5C77CE00A97F06 /* WaterView.m */; };
 		61489BC45D92687FCC10AD2A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A333912402514296D82CBFD /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,9 @@
 		5492EC2C1C5C206400A97F06 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		5492EC2E1C5C2A2D00A97F06 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		5492EC301C5C735100A97F06 /* shower.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shower.mp3; sourceTree = "<group>"; };
+		5492EC321C5C77CE00A97F06 /* Dripp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dripp-Bridging-Header.h"; sourceTree = "<group>"; };
+		5492EC331C5C77CE00A97F06 /* WaterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterView.h; sourceTree = "<group>"; };
+		5492EC341C5C77CE00A97F06 /* WaterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterView.m; sourceTree = "<group>"; };
 		89AC20D05B519CBA808E268B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8A333912402514296D82CBFD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -144,13 +148,15 @@
 				5492EC1E1C5BF95400A97F06 /* Dripper.swift */,
 				5492EC2A1C5C1D8200A97F06 /* UIImageColors.swift */,
 				5492EC151C5B354500A97F06 /* PlayerViewController.swift */,
-				5492EC1D1C5BF67E00A97F06 /* Audio Files */,
 				5492EC0B1C5B2E9700A97F06 /* FeedViewController.swift */,
 				5492EC221C5C04ED00A97F06 /* FeedCell.swift */,
 				5492EBE11C5B271600A97F06 /* Main.storyboard */,
 				5492EBE41C5B271600A97F06 /* Assets.xcassets */,
 				5492EBE61C5B271600A97F06 /* LaunchScreen.storyboard */,
+				5492EC1D1C5BF67E00A97F06 /* Audio Files */,
+				5492EC361C5C77D500A97F06 /* Water */,
 				5492EBE91C5B271600A97F06 /* Info.plist */,
+				5492EC321C5C77CE00A97F06 /* Dripp-Bridging-Header.h */,
 			);
 			path = Dripp;
 			sourceTree = "<group>";
@@ -180,6 +186,15 @@
 				5492EC301C5C735100A97F06 /* shower.mp3 */,
 			);
 			name = "Audio Files";
+			sourceTree = "<group>";
+		};
+		5492EC361C5C77D500A97F06 /* Water */ = {
+			isa = PBXGroup;
+			children = (
+				5492EC331C5C77CE00A97F06 /* WaterView.h */,
+				5492EC341C5C77CE00A97F06 /* WaterView.m */,
+			);
+			name = Water;
 			sourceTree = "<group>";
 		};
 		77AFF41EBF07B5752532C5BD /* Pods */ = {
@@ -395,6 +410,7 @@
 				5492EBDC1C5B271600A97F06 /* AppDelegate.swift in Sources */,
 				5492EC161C5B354500A97F06 /* PlayerViewController.swift in Sources */,
 				5492EC0C1C5B2E9700A97F06 /* FeedViewController.swift in Sources */,
+				5492EC351C5C77CE00A97F06 /* WaterView.m in Sources */,
 				5492EC121C5B2ECE00A97F06 /* ProfileViewController.swift in Sources */,
 				5492EC2F1C5C2A2D00A97F06 /* Song.swift in Sources */,
 				5492EC0E1C5B2EA800A97F06 /* SettingsViewController.swift in Sources */,
@@ -540,12 +556,15 @@
 			baseConfigurationReference = 4449194B6E0BC127F9E52C13 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Dripp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.Dripp.Dripp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dripp/Dripp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -554,12 +573,14 @@
 			baseConfigurationReference = 89AC20D05B519CBA808E268B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Dripp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.Dripp.Dripp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dripp/Dripp-Bridging-Header.h";
 			};
 			name = Release;
 		};

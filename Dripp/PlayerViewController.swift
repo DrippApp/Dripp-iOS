@@ -9,11 +9,13 @@
 import AVFoundation
 import UIKit
 import SABlurImageView
+import SpriteKit
 
 class PlayerViewController: UIViewController {
     
     
     var audioPlayer : AVAudioPlayer?
+    let waterView = WaterView(frame: CGRectMake(0, 0, 400, 700))
     var playlist = [Song]()
     var isPlaying = false
     var timer:NSTimer!
@@ -44,8 +46,17 @@ class PlayerViewController: UIViewController {
         
         //Create playlist
         loadPlaylist()
+        //Load water
+        waterView.center = self.view.center
+        waterView.userInteractionEnabled = true
+        waterView.backgroundColor = UIColor.clearColor()
+        waterView.currentWaterColor = UIColor.blueHeader.colorWithAlphaComponent(0.3)
+        waterView.percentum = 0.00
+        //insertSubview:aboveSubview:
+        self.view.insertSubview(waterView, aboveSubview: backgroundImage)
         //Play first song
         playSong(playlist[0])
+        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -113,6 +124,7 @@ class PlayerViewController: UIViewController {
         }
         
         progressBar.setProgress(percentage, animated: true)
+        waterView.percentum = percentage
     }
     
     func loadPlaylist() {

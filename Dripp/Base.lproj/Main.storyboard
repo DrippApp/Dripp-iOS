@@ -53,6 +53,7 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="whH-HZ-BY3" secondAttribute="trailing" constant="17" id="rSn-ed-IWm"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="name" destination="whH-HZ-BY3" id="MjX-Qg-Ab5"/>
                                     <outlet property="photo" destination="ydK-Qv-6Qe" id="tQR-9n-rHP"/>
@@ -180,6 +181,7 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="5ii-C5-vpP" secondAttribute="bottom" constant="12" id="d15-Lf-FBi"/>
                                 </constraints>

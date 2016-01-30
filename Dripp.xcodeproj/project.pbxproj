@@ -17,7 +17,6 @@
 		5492EC0E1C5B2EA800A97F06 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC0D1C5B2EA800A97F06 /* SettingsViewController.swift */; };
 		5492EC101C5B2EB500A97F06 /* ShowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC0F1C5B2EB500A97F06 /* ShowerViewController.swift */; };
 		5492EC121C5B2ECE00A97F06 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC111C5B2ECE00A97F06 /* ProfileViewController.swift */; };
-		5492EC141C5B2EEF00A97F06 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC131C5B2EEF00A97F06 /* SearchViewController.swift */; };
 		5492EC161C5B354500A97F06 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC151C5B354500A97F06 /* PlayerViewController.swift */; };
 		5492EC1A1C5BEFD600A97F06 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 5492EC191C5BEFD600A97F06 /* Podfile */; };
 		5492EC1C1C5BF64F00A97F06 /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5492EC1B1C5BF64F00A97F06 /* sample.mp3 */; };
@@ -32,6 +31,7 @@
 		5492EC3A1C5CA8D700A97F06 /* ChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC391C5CA8D700A97F06 /* ChallengesViewController.swift */; };
 		5492EC3C1C5CBD2A00A97F06 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC3B1C5CBD2A00A97F06 /* FriendsCell.swift */; };
 		5492EC3E1C5CC97B00A97F06 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC3D1C5CC97B00A97F06 /* FeedItem.swift */; };
+		5492EC401C5CD0B800A97F06 /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC3F1C5CD0B800A97F06 /* Dates.swift */; };
 		61489BC45D92687FCC10AD2A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A333912402514296D82CBFD /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +70,6 @@
 		5492EC0D1C5B2EA800A97F06 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5492EC0F1C5B2EB500A97F06 /* ShowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowerViewController.swift; sourceTree = "<group>"; };
 		5492EC111C5B2ECE00A97F06 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		5492EC131C5B2EEF00A97F06 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5492EC151C5B354500A97F06 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		5492EC191C5BEFD600A97F06 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5492EC1B1C5BF64F00A97F06 /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		5492EC391C5CA8D700A97F06 /* ChallengesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengesViewController.swift; sourceTree = "<group>"; };
 		5492EC3B1C5CBD2A00A97F06 /* FriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
 		5492EC3D1C5CC97B00A97F06 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		5492EC3F1C5CD0B800A97F06 /* Dates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
 		89AC20D05B519CBA808E268B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8A333912402514296D82CBFD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -144,26 +144,18 @@
 			isa = PBXGroup;
 			children = (
 				5492EBDB1C5B271600A97F06 /* AppDelegate.swift */,
-				5492EC0D1C5B2EA800A97F06 /* SettingsViewController.swift */,
-				5492EC131C5B2EEF00A97F06 /* SearchViewController.swift */,
-				5492EC2C1C5C206400A97F06 /* FriendsViewController.swift */,
-				5492EC3B1C5CBD2A00A97F06 /* FriendsCell.swift */,
-				5492EC0F1C5B2EB500A97F06 /* ShowerViewController.swift */,
-				5492EC241C5C052100A97F06 /* Colors.swift */,
-				5492EC2E1C5C2A2D00A97F06 /* Song.swift */,
-				5492EC111C5B2ECE00A97F06 /* ProfileViewController.swift */,
-				5492EC1E1C5BF95400A97F06 /* Dripper.swift */,
-				5492EC2A1C5C1D8200A97F06 /* UIImageColors.swift */,
-				5492EC151C5B354500A97F06 /* PlayerViewController.swift */,
-				5492EC391C5CA8D700A97F06 /* ChallengesViewController.swift */,
-				5492EC3D1C5CC97B00A97F06 /* FeedItem.swift */,
-				5492EC0B1C5B2E9700A97F06 /* FeedViewController.swift */,
-				5492EC221C5C04ED00A97F06 /* FeedCell.swift */,
+				5492EC411C5CD37100A97F06 /* Feed */,
+				5492EC421C5CD37B00A97F06 /* Challenges */,
+				5492EC481C5CD3D200A97F06 /* Friends */,
+				5492EC471C5CD3AD00A97F06 /* Shower and Player */,
+				5492EC461C5CD3A900A97F06 /* Profile */,
+				5492EC491C5CD3DD00A97F06 /* Settings */,
+				5492EC441C5CD38A00A97F06 /* Objects */,
+				5492EC451C5CD3A000A97F06 /* Supporting Files */,
 				5492EBE11C5B271600A97F06 /* Main.storyboard */,
 				5492EBE41C5B271600A97F06 /* Assets.xcassets */,
 				5492EBE61C5B271600A97F06 /* LaunchScreen.storyboard */,
 				5492EC1D1C5BF67E00A97F06 /* Audio Files */,
-				5492EC361C5C77D500A97F06 /* Water */,
 				5492EBE91C5B271600A97F06 /* Info.plist */,
 				5492EC321C5C77CE00A97F06 /* Dripp-Bridging-Header.h */,
 			);
@@ -204,6 +196,78 @@
 				5492EC341C5C77CE00A97F06 /* WaterView.m */,
 			);
 			name = Water;
+			sourceTree = "<group>";
+		};
+		5492EC411C5CD37100A97F06 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				5492EC0B1C5B2E9700A97F06 /* FeedViewController.swift */,
+				5492EC221C5C04ED00A97F06 /* FeedCell.swift */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		5492EC421C5CD37B00A97F06 /* Challenges */ = {
+			isa = PBXGroup;
+			children = (
+				5492EC391C5CA8D700A97F06 /* ChallengesViewController.swift */,
+			);
+			name = Challenges;
+			sourceTree = "<group>";
+		};
+		5492EC441C5CD38A00A97F06 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5492EC3D1C5CC97B00A97F06 /* FeedItem.swift */,
+				5492EC241C5C052100A97F06 /* Colors.swift */,
+				5492EC2E1C5C2A2D00A97F06 /* Song.swift */,
+				5492EC1E1C5BF95400A97F06 /* Dripper.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		5492EC451C5CD3A000A97F06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5492EC3F1C5CD0B800A97F06 /* Dates.swift */,
+				5492EC2A1C5C1D8200A97F06 /* UIImageColors.swift */,
+				5492EC361C5C77D500A97F06 /* Water */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5492EC461C5CD3A900A97F06 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5492EC111C5B2ECE00A97F06 /* ProfileViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		5492EC471C5CD3AD00A97F06 /* Shower and Player */ = {
+			isa = PBXGroup;
+			children = (
+				5492EC151C5B354500A97F06 /* PlayerViewController.swift */,
+				5492EC0F1C5B2EB500A97F06 /* ShowerViewController.swift */,
+			);
+			name = "Shower and Player";
+			sourceTree = "<group>";
+		};
+		5492EC481C5CD3D200A97F06 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				5492EC2C1C5C206400A97F06 /* FriendsViewController.swift */,
+				5492EC3B1C5CBD2A00A97F06 /* FriendsCell.swift */,
+			);
+			name = Friends;
+			sourceTree = "<group>";
+		};
+		5492EC491C5CD3DD00A97F06 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5492EC0D1C5B2EA800A97F06 /* SettingsViewController.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		77AFF41EBF07B5752532C5BD /* Pods */ = {
@@ -416,7 +480,6 @@
 				5492EC251C5C052100A97F06 /* Colors.swift in Sources */,
 				5492EC231C5C04ED00A97F06 /* FeedCell.swift in Sources */,
 				5492EC2D1C5C206400A97F06 /* FriendsViewController.swift in Sources */,
-				5492EC141C5B2EEF00A97F06 /* SearchViewController.swift in Sources */,
 				5492EC3C1C5CBD2A00A97F06 /* FriendsCell.swift in Sources */,
 				5492EC1F1C5BF95400A97F06 /* Dripper.swift in Sources */,
 				5492EBDC1C5B271600A97F06 /* AppDelegate.swift in Sources */,
@@ -424,6 +487,7 @@
 				5492EC0C1C5B2E9700A97F06 /* FeedViewController.swift in Sources */,
 				5492EC351C5C77CE00A97F06 /* WaterView.m in Sources */,
 				5492EC121C5B2ECE00A97F06 /* ProfileViewController.swift in Sources */,
+				5492EC401C5CD0B800A97F06 /* Dates.swift in Sources */,
 				5492EC2F1C5C2A2D00A97F06 /* Song.swift in Sources */,
 				5492EC0E1C5B2EA800A97F06 /* SettingsViewController.swift in Sources */,
 			);

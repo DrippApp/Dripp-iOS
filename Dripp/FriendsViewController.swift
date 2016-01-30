@@ -19,6 +19,8 @@ class FriendsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadFriends()
+        tableView.tableFooterView = UIView()
+        self.view.backgroundColor = UIColor(hexString: "#f1f1f1")
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -66,6 +68,7 @@ class FriendsViewController: UITableViewController {
         
         cell.photo.hnk_setImageFromURL(NSURL(string: friend.photo)!)
         cell.name.text = "\(friend.firstName) \(friend.lastName)"
+        cell.backgroundColor = UIColor(hexString: "#f1f1f1")
         return cell
     }
     

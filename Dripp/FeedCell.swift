@@ -17,7 +17,7 @@ class FeedCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         photo.layer.borderWidth = 1
-        photo.layer.borderColor = UIColor.clearColor().CGColor
+        photo.layer.borderColor = UIColor.lightGrayColor().CGColor
         photo.layer.cornerRadius = photo.frame.height/2
         photo.layer.masksToBounds = false
         photo.clipsToBounds = true

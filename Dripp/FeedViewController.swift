@@ -29,6 +29,8 @@ class FeedViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableFooterView = UIView()
+        self.view.backgroundColor = UIColor(hexString: "#f1f1f1")
         loadFeed()
         //set image for button
         notificationButton.setImage(showerImage, forState: .Normal)
@@ -263,9 +265,15 @@ class FeedViewController: UITableViewController {
         cell.photo.image = UIImage(named: "placeholder")
         
         let feed = self.feed[indexPath.row]
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss";
+        let date = formatter.dateFromString(feed.date)
+        let seconds = NSDate.secondsFrom(date!)
         
         cell.photo.hnk_setImageFromURL(NSURL(string: feed.photo)!)
         cell.info.text = feed.data
+        cell.timestamp.text = "\(String(date))s"
+        cell.backgroundColor = UIColor(hexString: "#f1f1f1")
         return cell
     }
     

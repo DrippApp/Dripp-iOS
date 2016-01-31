@@ -16,7 +16,7 @@ class FeedViewController: UITableViewController {
     var feed = [FeedItem]()
     
     let notificationButton = UIButton(type: .Custom)
-    let showerImage = UIImage(named:"showerheadwater")
+    let showerImage = UIImage(named:"showerhead")
     let showerWaterImage = UIImage(named:"showerheadwater")
     
     var refreshLoadingView : UIView!
@@ -33,7 +33,7 @@ class FeedViewController: UITableViewController {
         self.view.backgroundColor = UIColor(hexString: "#f1f1f1")
         loadFeed()
         //set image for button
-        notificationButton.setImage(showerImage, forState: .Normal)
+        notificationButton.setImage(showerWaterImage, forState: .Normal)
         //add function for button
         notificationButton.addTarget(self, action: "notificationsButtonPressed", forControlEvents: UIControlEvents.TouchUpInside)
         //set frame
@@ -70,6 +70,7 @@ class FeedViewController: UITableViewController {
     func notificationsButtonPressed() {
         let VC1 = self.storyboard!.instantiateViewControllerWithIdentifier("challenges") as! ChallengesViewController
         self.navigationController!.pushViewController(VC1, animated: true)
+        notificationButton.setImage(showerImage, forState: .Normal)
     }
     
     func setupRefreshControl() {

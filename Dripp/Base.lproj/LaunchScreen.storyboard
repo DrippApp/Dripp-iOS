@@ -15,7 +15,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="faT-I8-qH6">
+                                <rect key="frame" x="125" y="145" width="350" height="311"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="311" id="Slq-4v-5VA"/>
+                                    <constraint firstAttribute="width" constant="350" id="jpB-Iq-Y5I"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.22745098039215686" green="0.55294117647058827" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="faT-I8-qH6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mwf-hq-5tD"/>
+                            <constraint firstItem="faT-I8-qH6" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="oaV-Ye-hhO"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -23,4 +36,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash" width="1949" height="1732"/>
+    </resources>
 </document>

@@ -33,6 +33,13 @@
 		5492EC3E1C5CC97B00A97F06 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC3D1C5CC97B00A97F06 /* FeedItem.swift */; };
 		5492EC401C5CD0B800A97F06 /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC3F1C5CD0B800A97F06 /* Dates.swift */; };
 		61489BC45D92687FCC10AD2A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A333912402514296D82CBFD /* Pods.framework */; };
+		A95E24721C5DC3AF00FE81BF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A95E24701C5DC3AF00FE81BF /* Interface.storyboard */; };
+		A95E24741C5DC3AF00FE81BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95E24731C5DC3AF00FE81BF /* Assets.xcassets */; };
+		A95E247B1C5DC3B000FE81BF /* DrippWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A95E247A1C5DC3B000FE81BF /* DrippWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A95E24801C5DC3B000FE81BF /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E247F1C5DC3B000FE81BF /* InterfaceController.swift */; };
+		A95E24821C5DC3B000FE81BF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E24811C5DC3B000FE81BF /* ExtensionDelegate.swift */; };
+		A95E24841C5DC3B000FE81BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95E24831C5DC3B000FE81BF /* Assets.xcassets */; };
+		A95E24881C5DC3B000FE81BF /* DrippWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A95E246E1C5DC3AF00FE81BF /* DrippWatch.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +57,46 @@
 			remoteGlobalIDString = 5492EBD71C5B271600A97F06;
 			remoteInfo = Dripp;
 		};
+		A95E247C1C5DC3B000FE81BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5492EBD01C5B271600A97F06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A95E24791C5DC3B000FE81BF;
+			remoteInfo = "DrippWatch Extension";
+		};
+		A95E24861C5DC3B000FE81BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5492EBD01C5B271600A97F06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A95E246D1C5DC3AF00FE81BF;
+			remoteInfo = DrippWatch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A95E248E1C5DC3B000FE81BF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A95E247B1C5DC3B000FE81BF /* DrippWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A95E24901C5DC3B000FE81BF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				A95E24881C5DC3B000FE81BF /* DrippWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4449194B6E0BC127F9E52C13 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +135,15 @@
 		5492EC3F1C5CD0B800A97F06 /* Dates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
 		89AC20D05B519CBA808E268B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8A333912402514296D82CBFD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A95E246E1C5DC3AF00FE81BF /* DrippWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrippWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A95E24711C5DC3AF00FE81BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		A95E24731C5DC3AF00FE81BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A95E24751C5DC3AF00FE81BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A95E247A1C5DC3B000FE81BF /* DrippWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DrippWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A95E247F1C5DC3B000FE81BF /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		A95E24811C5DC3B000FE81BF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		A95E24831C5DC3B000FE81BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A95E24851C5DC3B000FE81BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +169,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A95E24771C5DC3B000FE81BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -124,6 +186,8 @@
 				5492EBDA1C5B271600A97F06 /* Dripp */,
 				5492EBF11C5B271600A97F06 /* DrippTests */,
 				5492EBFC1C5B271600A97F06 /* DrippUITests */,
+				A95E246F1C5DC3AF00FE81BF /* DrippWatch */,
+				A95E247E1C5DC3B000FE81BF /* DrippWatch Extension */,
 				5492EBD91C5B271600A97F06 /* Products */,
 				77AFF41EBF07B5752532C5BD /* Pods */,
 				C843B71CAEFC3F49C15EB2A8 /* Frameworks */,
@@ -136,6 +200,8 @@
 				5492EBD81C5B271600A97F06 /* Dripp.app */,
 				5492EBEE1C5B271600A97F06 /* DrippTests.xctest */,
 				5492EBF91C5B271600A97F06 /* DrippUITests.xctest */,
+				A95E246E1C5DC3AF00FE81BF /* DrippWatch.app */,
+				A95E247A1C5DC3B000FE81BF /* DrippWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,6 +345,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A95E246F1C5DC3AF00FE81BF /* DrippWatch */ = {
+			isa = PBXGroup;
+			children = (
+				A95E24701C5DC3AF00FE81BF /* Interface.storyboard */,
+				A95E24731C5DC3AF00FE81BF /* Assets.xcassets */,
+				A95E24751C5DC3AF00FE81BF /* Info.plist */,
+			);
+			path = DrippWatch;
+			sourceTree = "<group>";
+		};
+		A95E247E1C5DC3B000FE81BF /* DrippWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A95E247F1C5DC3B000FE81BF /* InterfaceController.swift */,
+				A95E24811C5DC3B000FE81BF /* ExtensionDelegate.swift */,
+				A95E24831C5DC3B000FE81BF /* Assets.xcassets */,
+				A95E24851C5DC3B000FE81BF /* Info.plist */,
+			);
+			path = "DrippWatch Extension";
+			sourceTree = "<group>";
+		};
 		C843B71CAEFC3F49C15EB2A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,10 +387,12 @@
 				5492EBD61C5B271600A97F06 /* Resources */,
 				3225FC981A8F78D6309EC14D /* Embed Pods Frameworks */,
 				AD429CC350F54357C547FFFF /* Copy Pods Resources */,
+				A95E24901C5DC3B000FE81BF /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A95E24871C5DC3B000FE81BF /* PBXTargetDependency */,
 			);
 			name = Dripp;
 			productName = Dripp;
@@ -346,6 +435,40 @@
 			productReference = 5492EBF91C5B271600A97F06 /* DrippUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		A95E246D1C5DC3AF00FE81BF /* DrippWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A95E248F1C5DC3B000FE81BF /* Build configuration list for PBXNativeTarget "DrippWatch" */;
+			buildPhases = (
+				A95E246C1C5DC3AF00FE81BF /* Resources */,
+				A95E248E1C5DC3B000FE81BF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A95E247D1C5DC3B000FE81BF /* PBXTargetDependency */,
+			);
+			name = DrippWatch;
+			productName = DrippWatch;
+			productReference = A95E246E1C5DC3AF00FE81BF /* DrippWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		A95E24791C5DC3B000FE81BF /* DrippWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A95E248D1C5DC3B000FE81BF /* Build configuration list for PBXNativeTarget "DrippWatch Extension" */;
+			buildPhases = (
+				A95E24761C5DC3B000FE81BF /* Sources */,
+				A95E24771C5DC3B000FE81BF /* Frameworks */,
+				A95E24781C5DC3B000FE81BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DrippWatch Extension";
+			productName = "DrippWatch Extension";
+			productReference = A95E247A1C5DC3B000FE81BF /* DrippWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -368,6 +491,13 @@
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = 5492EBD71C5B271600A97F06;
 					};
+					A95E246D1C5DC3AF00FE81BF = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = LCB3NE4A8E;
+					};
+					A95E24791C5DC3B000FE81BF = {
+						CreatedOnToolsVersion = 7.2;
+					};
 				};
 			};
 			buildConfigurationList = 5492EBD31C5B271600A97F06 /* Build configuration list for PBXProject "Dripp" */;
@@ -386,6 +516,8 @@
 				5492EBD71C5B271600A97F06 /* Dripp */,
 				5492EBED1C5B271600A97F06 /* DrippTests */,
 				5492EBF81C5B271600A97F06 /* DrippUITests */,
+				A95E246D1C5DC3AF00FE81BF /* DrippWatch */,
+				A95E24791C5DC3B000FE81BF /* DrippWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -415,6 +547,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A95E246C1C5DC3AF00FE81BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A95E24741C5DC3AF00FE81BF /* Assets.xcassets in Resources */,
+				A95E24721C5DC3AF00FE81BF /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A95E24781C5DC3B000FE81BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A95E24841C5DC3B000FE81BF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +658,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A95E24761C5DC3B000FE81BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A95E24821C5DC3B000FE81BF /* ExtensionDelegate.swift in Sources */,
+				A95E24801C5DC3B000FE81BF /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -521,6 +679,16 @@
 			isa = PBXTargetDependency;
 			target = 5492EBD71C5B271600A97F06 /* Dripp */;
 			targetProxy = 5492EBFA1C5B271600A97F06 /* PBXContainerItemProxy */;
+		};
+		A95E247D1C5DC3B000FE81BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A95E24791C5DC3B000FE81BF /* DrippWatch Extension */;
+			targetProxy = A95E247C1C5DC3B000FE81BF /* PBXContainerItemProxy */;
+		};
+		A95E24871C5DC3B000FE81BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A95E246D1C5DC3AF00FE81BF /* DrippWatch */;
+			targetProxy = A95E24861C5DC3B000FE81BF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -539,6 +707,14 @@
 				5492EBE71C5B271600A97F06 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A95E24701C5DC3AF00FE81BF /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A95E24711C5DC3AF00FE81BF /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -708,6 +884,68 @@
 			};
 			name = Release;
 		};
+		A95E24891C5DC3B000FE81BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = DrippWatch_Extension;
+				INFOPLIST_FILE = DrippWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.Dripp.Dripp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		A95E248A1C5DC3B000FE81BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = DrippWatch_Extension;
+				INFOPLIST_FILE = DrippWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.Dripp.Dripp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		A95E248B1C5DC3B000FE81BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "DrippWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.Dripp.Dripp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		A95E248C1C5DC3B000FE81BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "DrippWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.Dripp.Dripp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -746,6 +984,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A95E248D1C5DC3B000FE81BF /* Build configuration list for PBXNativeTarget "DrippWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A95E248B1C5DC3B000FE81BF /* Debug */,
+				A95E248C1C5DC3B000FE81BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A95E248F1C5DC3B000FE81BF /* Build configuration list for PBXNativeTarget "DrippWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A95E24891C5DC3B000FE81BF /* Debug */,
+				A95E248A1C5DC3B000FE81BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

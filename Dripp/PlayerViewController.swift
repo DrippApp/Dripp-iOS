@@ -61,7 +61,7 @@ class PlayerViewController: UIViewController {
         playSong(playlist[0])
         
         // Put in gif
-        gifBackground.image = UIImage.gifWithName("drops")
+        //gifBackground.image = UIImage.gifWithName("drops")
         
     }
     

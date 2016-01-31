@@ -40,17 +40,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBar.insertSubview(bgView, atIndex: 0)
         
         UINavigationBar.appearance().barTintColor = UIColor.blueHeader
-        UIToolbar.appearance().barTintColor = UIColor.blueHeader
-        UITabBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UIToolbar.appearance().tintColor = UIColor.blueHeader
-        UITabBar.appearance().barTintColor = UIColor.lightGrayColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.blue3], forState: .Normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.whiteColor()], forState: .Selected)
-        
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
+        ToolBarManager.setMainToolbars()
         
         return true
     }

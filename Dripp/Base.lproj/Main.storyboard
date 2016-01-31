@@ -140,7 +140,7 @@
                                                 <constraint firstAttribute="width" constant="455" id="zfj-lI-sfN"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCp-yI-wxH">
@@ -243,43 +243,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7f-eD-s7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2078" y="-1059"/>
-        </scene>
-        <!--Shower View Controller-->
-        <scene sceneID="hNz-n2-bh7">
-            <objects>
-                <viewController id="9pv-A4-QxB" customClass="ShowerViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
-                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ipd-dj-HxU">
-                                <rect key="frame" x="218" y="285" width="164" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNL-2D-HAW">
-                                        <rect key="frame" x="0.0" y="0.0" width="164" height="30"/>
-                                        <state key="normal" title="I'm ready for my shower"/>
-                                        <connections>
-                                            <segue destination="wfa-VF-L4L" kind="show" id="n9Y-iT-WTP"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="ipd-dj-HxU" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="4lw-M9-R3S"/>
-                            <constraint firstItem="ipd-dj-HxU" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="yAH-7s-JKg"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="showerTab" id="acW-dT-cKf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="bjE-Ik-nJP">
@@ -441,7 +404,95 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6V-rw-og8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1402" y="-320"/>
+            <point key="canvasLocation" x="2090" y="-326"/>
+        </scene>
+        <!--Start a Shower-->
+        <scene sceneID="uDy-8s-tPQ">
+            <objects>
+                <tableViewController id="Po1-By-lgk" customClass="ShowerViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mqe-IB-zqT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ShowerCell" rowHeight="92" id="NXv-hL-eXJ" customClass="ShowerCell" customModule="Dripp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="92"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NXv-hL-eXJ" id="VZF-Qw-ivU">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="91"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZT6-cO-GGR">
+                                            <rect key="frame" x="8" y="8" width="75" height="75"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="cVU-J7-Tsj"/>
+                                                <constraint firstAttribute="height" constant="75" id="g9Q-DI-BSS"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playlist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syp-66-ygv">
+                                            <rect key="frame" x="91" y="8" width="419" height="75"/>
+                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3H-hD-ZZU">
+                                            <rect key="frame" x="506" y="35" width="53" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ZT6-cO-GGR" secondAttribute="bottom" id="9eW-vO-3Te"/>
+                                        <constraint firstAttribute="topMargin" secondItem="ZT6-cO-GGR" secondAttribute="top" id="9li-in-nbS"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="r3H-hD-ZZU" secondAttribute="bottom" constant="27" id="Bhc-mT-pNB"/>
+                                        <constraint firstItem="r3H-hD-ZZU" firstAttribute="top" secondItem="VZF-Qw-ivU" secondAttribute="topMargin" constant="27" id="EYM-sI-37m"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Syp-66-ygv" secondAttribute="trailing" constant="49" id="SnS-Sf-EZ5"/>
+                                        <constraint firstItem="Syp-66-ygv" firstAttribute="leading" secondItem="ZT6-cO-GGR" secondAttribute="trailing" constant="8" id="Zo9-ng-d1p"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="ZT6-cO-GGR" secondAttribute="leading" id="agH-Dp-acY"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="r3H-hD-ZZU" secondAttribute="trailing" id="gPw-SY-wW7"/>
+                                        <constraint firstItem="r3H-hD-ZZU" firstAttribute="leading" secondItem="Syp-66-ygv" secondAttribute="trailing" constant="-4" id="rDM-E0-E1h"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Syp-66-ygv" secondAttribute="bottom" id="w8g-XA-ii1"/>
+                                        <constraint firstAttribute="topMargin" secondItem="Syp-66-ygv" secondAttribute="top" id="xQj-ZB-nl1"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="duration" destination="r3H-hD-ZZU" id="9HM-8f-DV1"/>
+                                    <outlet property="name" destination="Syp-66-ygv" id="Hjv-Yd-xWc"/>
+                                    <outlet property="photo" destination="ZT6-cO-GGR" id="yk9-4r-jP2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Po1-By-lgk" id="ef9-F1-O2O"/>
+                            <outlet property="delegate" destination="Po1-By-lgk" id="ehJ-Z7-vTM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Start a Shower" id="wJe-ae-hTP"/>
+                    <connections>
+                        <segue destination="wfa-VF-L4L" kind="presentation" identifier="openPlayer" id="V5V-3l-eaM"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXI-AF-Apu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1416" y="-334"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mwt-DJ-dDz">
+            <objects>
+                <navigationController id="tEg-4L-4Tl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="showerTab" id="tRT-Nr-4lT"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DQx-DM-QBn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Po1-By-lgk" kind="relationship" relationship="rootViewController" id="kKB-rG-OOn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mCP-Kk-I49" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="746" y="-334"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -578,7 +629,7 @@
                     <connections>
                         <segue destination="2pB-pq-Na5" kind="relationship" relationship="viewControllers" id="rmd-Q1-QTu"/>
                         <segue destination="OlT-ty-fr4" kind="relationship" relationship="viewControllers" id="IgF-DY-iI7"/>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="tEg-4L-4Tl" kind="relationship" relationship="viewControllers" id="GH5-HW-nyQ"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="mav-bc-WvB" kind="relationship" relationship="viewControllers" id="ZHh-Jq-D3o"/>
                     </connections>

@@ -510,6 +510,7 @@
 					};
 					A95E24791C5DC3B000FE81BF = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = LCB3NE4A8E;
 					};
 				};
 			};
@@ -937,6 +938,7 @@
 		A95E248B1C5DC3B000FE81BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "DrippWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.Dripp.Dripp.watchkitapp.watchkitextension;
@@ -951,6 +953,7 @@
 		A95E248C1C5DC3B000FE81BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "DrippWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.Dripp.Dripp.watchkitapp.watchkitextension;

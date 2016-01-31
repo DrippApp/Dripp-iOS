@@ -362,13 +362,13 @@
                                     <constraint firstAttribute="width" constant="240" id="k1r-0x-AD3"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvD-jd-hjw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvD-jd-hjw">
                                 <rect key="frame" x="534" y="31" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="XM9-tc-drO"/>
                                     <constraint firstAttribute="width" constant="45" id="m6j-sJ-VNH"/>
                                 </constraints>
-                                <state key="normal" title="X"/>
+                                <state key="normal" image="close"/>
                                 <connections>
                                     <action selector="cancelButton:" destination="wfa-VF-L4L" eventType="touchUpInside" id="7dc-1r-fRf"/>
                                 </connections>
@@ -656,6 +656,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="close" width="45" height="45"/>
         <image name="forward" width="50" height="50"/>
         <image name="friends" width="35" height="35"/>
         <image name="home" width="35" height="35"/>

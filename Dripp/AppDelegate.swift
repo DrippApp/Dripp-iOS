@@ -10,9 +10,71 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    enum ShortcutIdentifier: String {
+        case First
+        
+        // MARK: Initializers
+        
+        init?(fullType: String) {
+            guard let last = fullType.componentsSeparatedByString(".").last else { return nil }
+            
+            self.init(rawValue: last)
+        }
+        
+        // MARK: Properties
+        
+        var type: String {
+            return NSBundle.mainBundle().bundleIdentifier! + ".\(self.rawValue)"
+        }
+    }
+
 
     var window: UIWindow?
-
+    
+    /// Saved shortcut item used as a result of an app launch, used later when app is activated.
+    var launchedShortcutItem: UIApplicationShortcutItem?
+    
+    func handleShortCutItem(shortcutItem: UIApplicationShortcutItem) -> Bool {
+        var handled = false
+        
+        // Verify that the provided `shortcutItem`'s `type` is one handled by the application.
+        guard ShortcutIdentifier(fullType: shortcutItem.type) != nil else { return false }
+        
+        guard let shortCutType = shortcutItem.type as String? else { return false }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var vc = UIViewController()
+        
+        switch (shortCutType) {
+        case ShortcutIdentifier.First.type:
+            // Handle shortcut 1
+            vc = storyboard.instantiateViewControllerWithIdentifier("startShower") as! ShowerViewController
+            handled = true
+            break
+        default:
+            break
+        }
+        
+        // Display the selected view controller
+        window!.rootViewController?.presentViewController(vc, animated: true, completion: nil)
+        
+        return handled
+    }
+    
+    func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: Bool -> Void) {
+        let handledShortCutItem = handleShortCutItem(shortcutItem)
+        
+        completionHandler(handledShortCutItem)
+    }
+    
+    func applicationDidBecomeActive(application: UIApplication) {
+        guard let shortcut = launchedShortcutItem else { return }
+        
+        handleShortCutItem(shortcut)
+        
+        launchedShortcutItem = nil
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -63,10 +125,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
     func applicationWillTerminate(application: UIApplication) {

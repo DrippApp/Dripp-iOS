@@ -85,6 +85,7 @@ class FriendsViewController: UITableViewController {
                 alert.dismissViewControllerAnimated(true, completion: nil)
             }))
             self.presentViewController(alert, animated: true, completion: nil)
+            self.tableView.setEditing(false, animated: true)
             
         }
         challenge.backgroundColor = UIColor.blueHeader

@@ -82,7 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = self.window!.rootViewController as! UITabBarController
         //let view = self.window!.rootViewController as! UIView
         let tabBar = tabBarController.tabBar as UITabBar
-        let inactiveColor = UIColor(hexString: "#dad3cd")
+        let inactiveColor = UIColor(hexString: "#91c8fb")
         
         for tabBarItem in tabBar.items!
         {

@@ -18,6 +18,7 @@ class FeedItem {
     let data: String
     let date: String
     let type: String
+    var unread = false
     
     convenience init(json: JSON) {
         let uid = json["uid"].stringValue

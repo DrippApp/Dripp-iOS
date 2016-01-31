@@ -35,6 +35,7 @@
 		5492EC4C1C5DCAF800A97F06 /* ToolbarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC4B1C5DCAF800A97F06 /* ToolbarManager.swift */; };
 		5492EC4E1C5DCCEB00A97F06 /* ShowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC4D1C5DCCEB00A97F06 /* ShowerCell.swift */; };
 		5492EC501C5DCE0500A97F06 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC4F1C5DCE0500A97F06 /* Playlist.swift */; };
+		5492EC521C5DE77200A97F06 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5492EC511C5DE77200A97F06 /* WatchConnectivity.framework */; };
 		61489BC45D92687FCC10AD2A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A333912402514296D82CBFD /* Pods.framework */; };
 		A95E24721C5DC3AF00FE81BF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A95E24701C5DC3AF00FE81BF /* Interface.storyboard */; };
 		A95E24741C5DC3AF00FE81BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95E24731C5DC3AF00FE81BF /* Assets.xcassets */; };
@@ -139,6 +140,7 @@
 		5492EC4B1C5DCAF800A97F06 /* ToolbarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarManager.swift; sourceTree = "<group>"; };
 		5492EC4D1C5DCCEB00A97F06 /* ShowerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowerCell.swift; sourceTree = "<group>"; };
 		5492EC4F1C5DCE0500A97F06 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		5492EC511C5DE77200A97F06 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		89AC20D05B519CBA808E268B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8A333912402514296D82CBFD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95E246E1C5DC3AF00FE81BF /* DrippWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrippWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5492EC521C5DE77200A97F06 /* WatchConnectivity.framework in Frameworks */,
 				61489BC45D92687FCC10AD2A /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +381,7 @@
 		C843B71CAEFC3F49C15EB2A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5492EC511C5DE77200A97F06 /* WatchConnectivity.framework */,
 				8A333912402514296D82CBFD /* Pods.framework */,
 			);
 			name = Frameworks;

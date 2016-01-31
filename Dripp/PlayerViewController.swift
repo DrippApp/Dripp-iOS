@@ -12,10 +12,11 @@ import SABlurImageView
 import SpriteKit
 import SwiftGifOrigin
 import EasyAnimation
+import WatchConnectivity
 
-class PlayerViewController: UIViewController {
+class PlayerViewController: UIViewController, WCSessionDelegate {
     
-    
+    var watchSession : WCSession?
     var audioPlayer : AVAudioPlayer?
     let waterView = WaterView(frame: CGRectMake(0, 0, 400, 700))
     var playlist = [Song]()
@@ -47,6 +48,12 @@ class PlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if(WCSession.isSupported()){
+            watchSession = WCSession.defaultSession()
+            watchSession!.delegate = self
+            watchSession!.activateSession()
+        }
+        
         //Create playlist
         loadPlaylist()
         //Load water
@@ -63,6 +70,27 @@ class PlayerViewController: UIViewController {
         // Put in gif
         //gifBackground.image = UIImage.gifWithName("drops")
         
+    }
+    
+    @IBAction func messageChanged(sender: AnyObject) {
+        if let message : String = "testing" {
+            do {
+                try watchSession?.updateApplicationContext(
+                    ["message" : message]
+                )
+            } catch let error as NSError {
+                NSLog("Updating the context failed: " + error.localizedDescription)
+            }
+        }
+    }
+    
+    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]){
+        let message : String = applicationContext["message"] as! String
+        if message == "stop" {
+            closePlayer()
+        } else if message == "play" {
+            playPauseMusic()
+        }
     }
     
     func stringFromTimeInterval(interval: NSTimeInterval) -> String {
@@ -88,6 +116,10 @@ class PlayerViewController: UIViewController {
     }
     
     @IBAction func playOrPauseMusic(sender: AnyObject) {
+        playPauseMusic()
+    }
+    
+    func playPauseMusic() {
         stopButton.setTitle("Stop", forState: .Normal)
         if isPlaying {
             audioPlayer?.pause()
@@ -100,9 +132,14 @@ class PlayerViewController: UIViewController {
             
             timer = NSTimer.scheduledTimerWithTimeInterval(0.02, target: self, selector: "updateTime", userInfo: nil, repeats: true)
         }
+
     }
     
     @IBAction func cancelButton(sender: AnyObject) {
+        closePlayer()
+    }
+    
+    func closePlayer() {
         //close view controller and stop music
         audioPlayer?.stop()
         audioPlayer?.currentTime = 0

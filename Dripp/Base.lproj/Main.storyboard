@@ -328,6 +328,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9y-Fg-gjn">
                                         <rect key="frame" x="182" y="369" width="50" height="50"/>
                                         <state key="normal" image="forward"/>
+                                        <connections>
+                                            <action selector="messageChanged:" destination="wfa-VF-L4L" eventType="touchUpInside" id="oY3-Ud-q4E"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pg-IS-B6K">
                                         <rect key="frame" x="18" y="369" width="50" height="50"/>

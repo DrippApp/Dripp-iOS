@@ -98,7 +98,7 @@ class PlayerViewController: UIViewController {
             isPlaying = true
             playPauseButton.setImage(UIImage(named: "pause"), forState: UIControlState.Normal)
             
-            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateTime", userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.02, target: self, selector: "updateTime", userInfo: nil, repeats: true)
         }
     }
     
@@ -111,8 +111,8 @@ class PlayerViewController: UIViewController {
     }
     
     func updateTime() {
-        let currentTime = Int(audioPlayer!.currentTime)
-        let duration = Int(audioPlayer!.duration)
+        let currentTime = Float(audioPlayer!.currentTime)
+        let duration = Float(audioPlayer!.duration)
         let minutes = currentTime/60
         let seconds = currentTime - minutes * 60
         let percentage = Float(currentTime) / Float(duration)

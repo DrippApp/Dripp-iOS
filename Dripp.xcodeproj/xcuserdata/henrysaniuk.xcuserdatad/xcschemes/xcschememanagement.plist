@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>DrippWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>5492EBF81C5B271600A97F06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A95E246D1C5DC3AF00FE81BF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

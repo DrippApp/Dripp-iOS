@@ -170,7 +170,7 @@ class PlayerViewController: UIViewController, WCSessionDelegate {
         }
         
         progressBar.setProgress(percentage, animated: true)
-        let newPercentage = Float(currentTime) / Float(duration+625)
+        let newPercentage = Float(currentTime) / Float(duration+100)
         waterView.percentum = newPercentage
         //waterView.frame = CGRectOffset( waterView.frame, 0, 10 )
     }

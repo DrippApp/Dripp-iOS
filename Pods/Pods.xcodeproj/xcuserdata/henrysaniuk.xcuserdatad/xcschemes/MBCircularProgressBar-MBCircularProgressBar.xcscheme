@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CFACD58C5710EAA33BF48536'
-               BlueprintName = 'EasyAnimation'
+               BlueprintIdentifier = '916093325B94E4BAE58A2C02'
+               BlueprintName = 'MBCircularProgressBar-MBCircularProgressBar'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'EasyAnimation.framework'>
+               BuildableName = 'MBCircularProgressBar.bundle'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

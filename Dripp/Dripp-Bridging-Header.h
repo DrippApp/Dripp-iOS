@@ -3,3 +3,5 @@
 //
 
 #import "WaterView.h"
+#import "MBCircularProgressBar/MBCircularProgressBarLayer.h"
+#import "MBCircularProgressBar/MBCircularProgressBarView.h"

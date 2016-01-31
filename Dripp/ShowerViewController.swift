@@ -24,10 +24,13 @@ class ShowerViewController: UITableViewController {
     }
     
     func loadPlaylists() {
-        playlists.append(Playlist(name: "Drake 1", duration: "2:36", albumArtwork: "shower", recommended: true))
-        playlists.append(Playlist(name: "Drake 2", duration: "5:43", albumArtwork: "shower", recommended: false))
-        playlists.append(Playlist(name: "Drake 3", duration: "9:08", albumArtwork: "shower", recommended: false))
-        playlists.append(Playlist(name: "Drake 4", duration: "15:40", albumArtwork: "shower", recommended: false))
+        playlists.append(Playlist(name: "Starred", duration: "15:41", albumArtwork: "shower", recommended: true))
+        playlists.append(Playlist(name: "Discover Weekly", duration: "1:54:43", albumArtwork: "DiscoverWeekly", recommended: false))
+        playlists.append(Playlist(name: "Top Hits", duration: "2:57:00", albumArtwork: "tophits", recommended: false))
+        playlists.append(Playlist(name: "Songs of Innocence", duration: "49:00", albumArtwork: "u2", recommended: false))
+        playlists.append(Playlist(name: "Power Shower", duration: "17:37", albumArtwork: "saintmotel", recommended: false))
+        playlists.append(Playlist(name: "All You Need is Love", duration: "2:15:00", albumArtwork: "beatles", recommended: false))
+
     }
     
     override func didReceiveMemoryWarning() {

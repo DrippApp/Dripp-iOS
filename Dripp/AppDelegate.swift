@@ -80,35 +80,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let tabBarController = self.window!.rootViewController as! UITabBarController
+        //let view = self.window!.rootViewController as! UIView
         let tabBar = tabBarController.tabBar as UITabBar
+        let inactiveColor = UIColor(hexString: "#dad3cd")
         
         for tabBarItem in tabBar.items!
         {
             tabBarItem.title = ""
             tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
+            if let image = tabBarItem.image {
+                tabBarItem.image = image.imageWithColor(inactiveColor).imageWithRenderingMode(.AlwaysOriginal)
+            }
         }
-        
-        //let middleTabBar = tabBar.items![2] as UITabBarItem
-        //middleTabBar.image =
-       // middleTabBar.image = middleTabBar.image?.tabBarImageWithCustomTint(UIColor.redColor())
         
         // Add background color to middle tabBarItem
         let itemIndex = 2
-        let bgColor = UIColor.blueHeader
+        let bgColor = UIColor(hexString: "#3983c8")
         
         let itemWidth = tabBar.frame.width / CGFloat(tabBar.items!.count)
         let bgView = UIView(frame: CGRectMake((itemWidth * CGFloat(itemIndex)+27.5), 0, itemWidth, tabBar.frame.height))
         bgView.backgroundColor = bgColor
         tabBar.insertSubview(bgView, atIndex: 0)
         
+        let bgView2 = UIView(frame: CGRectMake((itemWidth * CGFloat(itemIndex)+27.5), 610, itemWidth, tabBar.frame.height/3))
+        bgView2.backgroundColor = bgColor
+        bgView2.layer.cornerRadius = bgView2.frame.height/2
+        bgView2.layer.masksToBounds = false
+        bgView2.clipsToBounds = true
+        self.window!.rootViewController!.view.insertSubview(bgView2, aboveSubview: bgView)
+        //bgView2.insertSubview(bgView2, atIndex: 0)
+       
         UINavigationBar.appearance().barTintColor = UIColor.blueHeader
+        UIToolbar.appearance().barTintColor = UIColor.blueHeader
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UIToolbar.appearance().tintColor = UIColor.blueHeader
+        UITabBar.appearance().barTintColor = UIColor.blueHeader
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
         
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.blue3], forState: .Normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.whiteColor()], forState: .Selected)
         
-        ToolBarManager.setMainToolbars()
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         
         return true
     }

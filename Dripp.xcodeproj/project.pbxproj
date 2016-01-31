@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		542CD03F1C5E1BCE006C7A99 /* ShowerStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542CD03E1C5E1BCE006C7A99 /* ShowerStatsViewController.swift */; };
 		5492EBDC1C5B271600A97F06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EBDB1C5B271600A97F06 /* AppDelegate.swift */; };
 		5492EBE31C5B271600A97F06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5492EBE11C5B271600A97F06 /* Main.storyboard */; };
 		5492EBE51C5B271600A97F06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5492EBE41C5B271600A97F06 /* Assets.xcassets */; };
@@ -104,6 +105,7 @@
 
 /* Begin PBXFileReference section */
 		4449194B6E0BC127F9E52C13 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		542CD03E1C5E1BCE006C7A99 /* ShowerStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowerStatsViewController.swift; sourceTree = "<group>"; };
 		5492EBD81C5B271600A97F06 /* Dripp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dripp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5492EBDB1C5B271600A97F06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5492EBE21C5B271600A97F06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 			children = (
 				5492EC151C5B354500A97F06 /* PlayerViewController.swift */,
 				5492EC0F1C5B2EB500A97F06 /* ShowerViewController.swift */,
+				542CD03E1C5E1BCE006C7A99 /* ShowerStatsViewController.swift */,
 				5492EC4D1C5DCCEB00A97F06 /* ShowerCell.swift */,
 			);
 			name = "Shower and Player";
@@ -637,6 +640,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5492EC101C5B2EB500A97F06 /* ShowerViewController.swift in Sources */,
+				542CD03F1C5E1BCE006C7A99 /* ShowerStatsViewController.swift in Sources */,
 				5492EC4E1C5DCCEB00A97F06 /* ShowerCell.swift in Sources */,
 				5492EC3A1C5CA8D700A97F06 /* ChallengesViewController.swift in Sources */,
 				5492EC2B1C5C1D8200A97F06 /* UIImageColors.swift in Sources */,

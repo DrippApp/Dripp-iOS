@@ -74,6 +74,8 @@ class ShowerViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("openPlayer", sender: self)
+        let VC1 = self.storyboard!.instantiateViewControllerWithIdentifier("showerStats") as! ShowerStatsViewController
+        self.navigationController!.pushViewController(VC1, animated: true)
     }
     
 }

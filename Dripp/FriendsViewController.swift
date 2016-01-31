@@ -23,11 +23,6 @@ class FriendsViewController: UITableViewController {
         self.view.backgroundColor = UIColor(hexString: "#f1f1f1")
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        loadFriends()
-    }
-    
     func loadFriends() {
         Alamofire.request(.GET, "http://api.dripp.xyz/user/16/connections",
             parameters: ["api": true])

@@ -267,14 +267,6 @@ class FeedViewController: UITableViewController {
         
         let feed = self.feed[indexPath.row]
         
-        if feed.type == "update" {
-            cell.photo.layer.borderColor = UIColor(hexString: "#FF5722").CGColor
-        } else if feed.type == "achievement" {
-            cell.photo.layer.borderColor = UIColor(hexString: "#00c853").CGColor
-        } else {
-            cell.photo.layer.borderColor = UIColor(hexString: "#7C4DFF").CGColor
-        }
-        
         cell.photo.hnk_setImageFromURL(NSURL(string: feed.photo)!)
         cell.info.text = feed.data
         cell.name.text = "\(feed.firstName) \(feed.lastName)"

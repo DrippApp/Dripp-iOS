@@ -17,12 +17,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        let tabBarController = self.window!.rootViewController as! UITabBarController
+        let tabBar = tabBarController.tabBar as UITabBar
+        
+        for tabBarItem in tabBar.items!
+        {
+            tabBarItem.title = ""
+            tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
+        }
+        
+        //let middleTabBar = tabBar.items![2] as UITabBarItem
+        //middleTabBar.image =
+       // middleTabBar.image = middleTabBar.image?.tabBarImageWithCustomTint(UIColor.redColor())
+        
+        // Add background color to middle tabBarItem
+        let itemIndex = 2
+        let bgColor = UIColor.blueHeader
+        
+        let itemWidth = tabBar.frame.width / CGFloat(tabBar.items!.count)
+        let bgView = UIView(frame: CGRectMake((itemWidth * CGFloat(itemIndex)+27.5), 0, itemWidth, tabBar.frame.height))
+        bgView.backgroundColor = bgColor
+        tabBar.insertSubview(bgView, atIndex: 0)
+        
         UINavigationBar.appearance().barTintColor = UIColor.blueHeader
         UIToolbar.appearance().barTintColor = UIColor.blueHeader
         UITabBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UIToolbar.appearance().tintColor = UIColor.blueHeader
-        UITabBar.appearance().barTintColor = UIColor.blueHeader
+        UITabBar.appearance().barTintColor = UIColor.lightGrayColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
         
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.blue3], forState: .Normal)

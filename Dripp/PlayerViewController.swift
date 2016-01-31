@@ -135,6 +135,7 @@ class PlayerViewController: UIViewController {
         trackTitle.text = song.name
         albumName.text = song.album
         stopButton.setTitle("Cancel", forState: .Normal)
+        progressBar.progressTintColor = UIColor(hexString: "#E83939")
         progressBar.setProgress(0, animated: false)
         
         if let audio = self.setupAudioPlayerWithFile(song.file, type:"mp3") {

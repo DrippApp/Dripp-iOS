@@ -76,11 +76,11 @@
             </objects>
             <point key="canvasLocation" x="1416" y="-1765"/>
         </scene>
-        <!--Friends-->
+        <!--Navigation Controller-->
         <scene sceneID="0nP-Q9-1vu">
             <objects>
                 <navigationController id="OlT-ty-fr4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Friends" id="6GI-mo-QEr"/>
+                    <tabBarItem key="tabBarItem" title="" image="friends" id="6GI-mo-QEr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MAa-i7-kA0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -134,10 +134,10 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some information" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWq-5o-bIk">
-                                            <rect key="frame" x="101" y="10" width="442" height="75"/>
+                                            <rect key="frame" x="101" y="37" width="455" height="48"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="75" id="nq2-Ui-3qn"/>
-                                                <constraint firstAttribute="width" constant="442" id="zfj-lI-sfN"/>
+                                                <constraint firstAttribute="height" constant="48" id="nq2-Ui-3qn"/>
+                                                <constraint firstAttribute="width" constant="455" id="zfj-lI-sfN"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -153,19 +153,28 @@
                                             <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwE-Vp-fqB">
+                                            <rect key="frame" x="101" y="17" width="442" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="5ii-C5-vpP" firstAttribute="top" secondItem="E3N-2x-pVZ" secondAttribute="topMargin" constant="2" id="Ao8-u4-rRH"/>
                                         <constraint firstItem="5ii-C5-vpP" firstAttribute="leading" secondItem="E3N-2x-pVZ" secondAttribute="leadingMargin" constant="3" id="Cd0-vC-Dvj"/>
                                         <constraint firstItem="iWq-5o-bIk" firstAttribute="leading" secondItem="5ii-C5-vpP" secondAttribute="trailing" constant="15" id="D6k-O9-QAs"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="dCp-yI-wxH" secondAttribute="bottom" constant="3" id="OVZ-aC-ba2"/>
-                                        <constraint firstItem="iWq-5o-bIk" firstAttribute="top" secondItem="E3N-2x-pVZ" secondAttribute="topMargin" constant="2" id="Qb3-gs-BqD"/>
+                                        <constraint firstItem="iWq-5o-bIk" firstAttribute="top" secondItem="E3N-2x-pVZ" secondAttribute="topMargin" constant="29" id="Qb3-gs-BqD"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="dCp-yI-wxH" secondAttribute="trailing" id="Qgw-j8-1oU"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="dCp-yI-wxH" secondAttribute="bottom" constant="50" id="RVF-eY-7Uv"/>
+                                        <constraint firstItem="CwE-Vp-fqB" firstAttribute="top" secondItem="E3N-2x-pVZ" secondAttribute="topMargin" constant="9" id="TG5-ZY-GXe"/>
                                         <constraint firstItem="dCp-yI-wxH" firstAttribute="top" secondItem="iWq-5o-bIk" secondAttribute="bottom" constant="2" id="cQV-Dw-OEE"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="dCp-yI-wxH" secondAttribute="trailing" constant="175" id="etL-md-FJo"/>
+                                        <constraint firstItem="CwE-Vp-fqB" firstAttribute="leading" secondItem="5ii-C5-vpP" secondAttribute="trailing" constant="15" id="hTM-aL-SuO"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="iWq-5o-bIk" secondAttribute="trailing" constant="29" id="mDN-A1-5c9"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="iWq-5o-bIk" secondAttribute="trailing" constant="49" id="tnV-OU-5Yj"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="CwE-Vp-fqB" secondAttribute="trailing" constant="49" id="t2Q-pd-Cth"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="iWq-5o-bIk" secondAttribute="trailing" constant="36" id="tnV-OU-5Yj"/>
                                         <constraint firstItem="iWq-5o-bIk" firstAttribute="leading" secondItem="5ii-C5-vpP" secondAttribute="trailing" constant="15" id="w5B-bM-aTm"/>
                                         <constraint firstItem="dCp-yI-wxH" firstAttribute="top" secondItem="E3N-2x-pVZ" secondAttribute="topMargin" constant="9" id="waP-zR-eJP"/>
                                         <constraint firstItem="dCp-yI-wxH" firstAttribute="leading" secondItem="5ii-C5-vpP" secondAttribute="trailing" constant="15" id="ykt-lr-889"/>
@@ -187,6 +196,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="info" destination="iWq-5o-bIk" id="QTI-2H-gGD"/>
+                                    <outlet property="name" destination="CwE-Vp-fqB" id="qBa-jm-Dvb"/>
                                     <outlet property="photo" destination="5ii-C5-vpP" id="mVJ-QE-c1v"/>
                                     <outlet property="timestamp" destination="dCp-yI-wxH" id="yct-J4-eEs"/>
                                 </connections>
@@ -234,7 +244,7 @@
             </objects>
             <point key="canvasLocation" x="2078" y="-1059"/>
         </scene>
-        <!--Shower-->
+        <!--Shower View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="ShowerViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
@@ -265,7 +275,7 @@
                             <constraint firstItem="ipd-dj-HxU" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="yAH-7s-JKg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Shower" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="" image="showerTab" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -433,7 +443,7 @@
             </objects>
             <point key="canvasLocation" x="1402" y="-320"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="ProfileViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
@@ -446,7 +456,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="" image="profile" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -536,11 +546,11 @@
             </objects>
             <point key="canvasLocation" x="1416" y="1064"/>
         </scene>
-        <!--Settings-->
+        <!--Navigation Controller-->
         <scene sceneID="Yxh-ys-bP9">
             <objects>
                 <navigationController id="mav-bc-WvB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="ViO-pb-i50"/>
+                    <tabBarItem key="tabBarItem" title="" image="settings" id="ViO-pb-i50"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tGH-eR-JGc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -563,6 +573,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="2pB-pq-Na5" kind="relationship" relationship="viewControllers" id="rmd-Q1-QTu"/>
@@ -578,11 +589,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
         <image name="forward" width="50" height="50"/>
-        <image name="home" width="50" height="50"/>
+        <image name="friends" width="35" height="35"/>
+        <image name="home" width="35" height="35"/>
         <image name="play" width="100" height="100"/>
+        <image name="profile" width="42" height="42"/>
         <image name="rewind" width="50" height="50"/>
-        <image name="second" width="30" height="30"/>
+        <image name="settings" width="35" height="35"/>
+        <image name="showerTab" width="35" height="35"/>
     </resources>
 </document>

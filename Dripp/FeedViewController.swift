@@ -16,7 +16,7 @@ class FeedViewController: UITableViewController {
     var feed = [FeedItem]()
     
     let notificationButton = UIButton(type: .Custom)
-    let showerImage = UIImage(named:"showerhead")
+    let showerImage = UIImage(named:"showerheadwater")
     let showerWaterImage = UIImage(named:"showerheadwater")
     
     var refreshLoadingView : UIView!
@@ -115,6 +115,7 @@ class FeedViewController: UITableViewController {
     func refresh(){
         
         //contact API
+        loadFeed()
         
         let delayInSeconds = 3.0;
         let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)));
@@ -265,14 +266,19 @@ class FeedViewController: UITableViewController {
         cell.photo.image = UIImage(named: "placeholder")
         
         let feed = self.feed[indexPath.row]
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss";
-        let date = formatter.dateFromString(feed.date)
-        let seconds = NSDate.secondsFrom(date!)
+        
+        if feed.type == "update" {
+            cell.photo.layer.borderColor = UIColor(hexString: "#FF5722").CGColor
+        } else if feed.type == "achievement" {
+            cell.photo.layer.borderColor = UIColor(hexString: "#00c853").CGColor
+        } else {
+            cell.photo.layer.borderColor = UIColor(hexString: "#7C4DFF").CGColor
+        }
         
         cell.photo.hnk_setImageFromURL(NSURL(string: feed.photo)!)
         cell.info.text = feed.data
-        cell.timestamp.text = "\(String(date))s"
+        cell.name.text = "\(feed.firstName) \(feed.lastName)"
+        cell.timestamp.text = feed.date
         cell.backgroundColor = UIColor(hexString: "#f1f1f1")
         return cell
     }

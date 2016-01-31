@@ -79,7 +79,18 @@ class FriendsViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         let challenge = UITableViewRowAction(style: .Normal, title: "Challenge") { action, index in
-            print("challenge button tapped")
+            
+            let friend = self.friends[indexPath.row]
+            
+            let alert = UIAlertController(title: "Quick Challenge", message: "Challenge \(friend.firstName) to take a shower using your recommended playlist.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Sure", style: UIAlertActionStyle.Default, handler: { alertAction in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+            }))
+            alert.addAction(UIAlertAction(title: "Maybe Later", style: UIAlertActionStyle.Default, handler: { alertAction in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+            }))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
         }
         challenge.backgroundColor = UIColor.blueHeader
         

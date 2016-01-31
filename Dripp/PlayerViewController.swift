@@ -54,6 +54,16 @@ class PlayerViewController: UIViewController, WCSessionDelegate {
             watchSession!.activateSession()
         }
         
+        if let message : String = "Shower - Becky G" {
+            do {
+                try watchSession?.updateApplicationContext(
+                    ["message" : message]
+                )
+            } catch let error as NSError {
+                NSLog("Updating the context failed: " + error.localizedDescription)
+            }
+        }
+        
         //Create playlist
         loadPlaylist()
         //Load water
@@ -160,7 +170,8 @@ class PlayerViewController: UIViewController, WCSessionDelegate {
         }
         
         progressBar.setProgress(percentage, animated: true)
-        waterView.percentum = percentage
+        let newPercentage = Float(currentTime) / Float(duration+625)
+        waterView.percentum = newPercentage
         //waterView.frame = CGRectOffset( waterView.frame, 0, 10 )
     }
     

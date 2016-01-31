@@ -10,74 +10,13 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="DrippWatch" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="Notifications" id="zhy-tc-257">
-                            <connections>
-                                <segue destination="ktI-qr-WVf" kind="push" id="huu-Ed-sAo"/>
-                            </connections>
-                        </button>
-                        <separator alignment="left" id="XAi-Q7-5Jh"/>
-                        <button width="1" alignment="left" title="Shower" id="Qk6-4T-rK0">
-                            <connections>
-                                <segue destination="f34-gu-r4a" kind="push" id="YI4-N6-KQ5"/>
-                            </connections>
-                        </button>
+                        <button width="1" alignment="left" title="Play/Pause" id="gY5-EZ-2R0"/>
+                        <button width="1" alignment="left" title="Stop" id="vdd-ef-frt"/>
+                        <label alignment="center" text="Label" id="bIX-CF-x2z"/>
                     </items>
                 </controller>
             </objects>
             <point key="canvasLocation" x="196" y="260"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="Kjf-Au-v6d">
-            <objects>
-                <controller title="Home" id="ktI-qr-WVf" customClass="NotificationViewController" customModule="DrippWatch_Extension">
-                    <items>
-                        <table alignment="left" id="rTo-vV-fVi">
-                            <items>
-                                <tableRow id="4nm-8V-sXQ" customClass="WatchListRowController" customModule="Dripp">
-                                    <group key="rootItem" width="1" alignment="left" id="giL-6S-ggP">
-                                        <items>
-                                            <imageView width="35" height="35" alignment="left" id="eSc-9V-xMw"/>
-                                            <label alignment="left" text="Label" id="6wa-vM-uz8">
-                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
-                                            </label>
-                                        </items>
-                                    </group>
-                                    <connections>
-                                        <outlet property="image" destination="eSc-9V-xMw" id="XdM-r0-Evd"/>
-                                        <outlet property="textLabel" destination="6wa-vM-uz8" id="tnx-uX-Bt0"/>
-                                    </connections>
-                                </tableRow>
-                            </items>
-                        </table>
-                    </items>
-                    <connections>
-                        <outlet property="notificationTable" destination="rTo-vV-fVi" id="EgH-H4-FsC"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="453" y="116"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="KYb-03-tR8">
-            <objects>
-                <controller title="Home" id="f34-gu-r4a" customClass="StartShowerViewController" customModule="DrippWatch_Extension">
-                    <items>
-                        <table alignment="left" id="y2z-ba-mMx">
-                            <items>
-                                <tableRow id="p4x-ZC-3zZ">
-                                    <group key="rootItem" width="1" alignment="left" id="inQ-MA-qea">
-                                        <items>
-                                            <imageView width="35" height="35" alignment="left" id="0RS-20-PqB"/>
-                                            <label alignment="left" text="Label" id="zXJ-d2-Yd9"/>
-                                        </items>
-                                    </group>
-                                </tableRow>
-                            </items>
-                        </table>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="453" y="373"/>
         </scene>
     </scenes>
 </document>

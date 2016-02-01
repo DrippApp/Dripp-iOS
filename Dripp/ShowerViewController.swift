@@ -24,7 +24,7 @@ class ShowerViewController: UITableViewController {
     }
     
     func loadPlaylists() {
-        playlists.append(Playlist(name: "Starred", duration: "15m", albumArtwork: "starred", recommended: true))
+        playlists.append(Playlist(name: "Recommended", duration: "15m", albumArtwork: "starred", recommended: true))
         playlists.append(Playlist(name: "Top Hits", duration: "2h51m", albumArtwork: "tophits", recommended: false))
         playlists.append(Playlist(name: "Discover Weekly", duration: "1h54m", albumArtwork: "discoverweekly", recommended: false))
         playlists.append(Playlist(name: "Songs of Innocence", duration: "49m", albumArtwork: "u2", recommended: false))

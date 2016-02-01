@@ -20,7 +20,7 @@ class ShowerStatsViewController: UIViewController {
         waterView.center = self.view.center
         waterView.backgroundColor = UIColor.clearColor()
         waterView.currentWaterColor = UIColor.blueHeader.colorWithAlphaComponent(0.3)
-        waterView.percentum = 0.30
+        waterView.percentum = 0.27
         self.view.insertSubview(waterView, belowSubview: tub)
         
         self.title = "Your Shower Stats"

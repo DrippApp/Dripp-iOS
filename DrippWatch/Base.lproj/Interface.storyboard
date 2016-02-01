@@ -20,7 +20,7 @@
                                 <action selector="stopTapped" destination="AgC-eL-Hgc" id="Z0g-5Z-9U4"/>
                             </connections>
                         </button>
-                        <label alignment="center" text="Label" id="bIX-CF-x2z"/>
+                        <label alignment="center" text=" " id="bIX-CF-x2z"/>
                     </items>
                     <connections>
                         <outlet property="messagelabel" destination="bIX-CF-x2z" id="Z1J-Xa-wAu"/>

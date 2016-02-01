@@ -31,6 +31,20 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate {
         self.progressBar.progressStrokeColor = UIColor.blueHeader
         albums = ["a.png",  "b.png", "c.png", "d.png", "e.png", "f.png", "g.png", "h.png", "i.png", "j.png", "k.png", "l.png", "m.png"]
         names = ["a.png",  "b.png", "c.png", "d.png", "e.png", "f.png", "g.png", "h.png", "i.png", "j.png", "k.png", "l.png", "m.png"]
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:Selector("imageTapped:"))
+        achievements.userInteractionEnabled = true
+        achievements.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    func imageTapped(img: AnyObject)
+    {
+        let alert = UIAlertController(title: "Power Shower", message: "You took a shower in less than 10 minutes!", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Sweet", style: UIAlertActionStyle.Default, handler: { alertAction in
+            alert.dismissViewControllerAnimated(true, completion: nil)
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
+        
     }
     
     override func viewDidAppear(animated: Bool) {

@@ -11,6 +11,7 @@
 		542CD0411C5E8B8F006C7A99 /* ChallengeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542CD0401C5E8B8F006C7A99 /* ChallengeCell.swift */; };
 		542CD0431C5EBDBC006C7A99 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542CD0421C5EBDBC006C7A99 /* AchievementsViewController.swift */; };
 		542CD0451C5EBDD2006C7A99 /* AchievementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542CD0441C5EBDD2006C7A99 /* AchievementCell.swift */; };
+		542CD0471C5EEE11006C7A99 /* drops.gif in Resources */ = {isa = PBXBuildFile; fileRef = 542CD0461C5EEE11006C7A99 /* drops.gif */; };
 		5492EBDC1C5B271600A97F06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EBDB1C5B271600A97F06 /* AppDelegate.swift */; };
 		5492EBE31C5B271600A97F06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5492EBE11C5B271600A97F06 /* Main.storyboard */; };
 		5492EBE51C5B271600A97F06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5492EBE41C5B271600A97F06 /* Assets.xcassets */; };
@@ -112,6 +113,7 @@
 		542CD0401C5E8B8F006C7A99 /* ChallengeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeCell.swift; sourceTree = "<group>"; };
 		542CD0421C5EBDBC006C7A99 /* AchievementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
 		542CD0441C5EBDD2006C7A99 /* AchievementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementCell.swift; sourceTree = "<group>"; };
+		542CD0461C5EEE11006C7A99 /* drops.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = drops.gif; sourceTree = "<group>"; };
 		5492EBD81C5B271600A97F06 /* Dripp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dripp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5492EBDB1C5B271600A97F06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5492EBE21C5B271600A97F06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				5492EC241C5C052100A97F06 /* Colors.swift */,
 				5492EC2E1C5C2A2D00A97F06 /* Song.swift */,
 				5492EC1E1C5BF95400A97F06 /* Dripper.swift */,
+				542CD0461C5EEE11006C7A99 /* drops.gif */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				5492EC311C5C735100A97F06 /* shower.mp3 in Resources */,
 				5492EC1A1C5BEFD600A97F06 /* Podfile in Resources */,
 				5492EBE81C5B271600A97F06 /* LaunchScreen.storyboard in Resources */,
+				542CD0471C5EEE11006C7A99 /* drops.gif in Resources */,
 				5492EBE51C5B271600A97F06 /* Assets.xcassets in Resources */,
 				5492EBE31C5B271600A97F06 /* Main.storyboard in Resources */,
 				5492EC1C1C5BF64F00A97F06 /* sample.mp3 in Resources */,

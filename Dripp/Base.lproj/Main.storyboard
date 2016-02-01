@@ -630,7 +630,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyx-Ic-Usg" customClass="MBCircularProgressBarView">
                                 <rect key="frame" x="150" y="74" width="300" height="300"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="henry" translatesAutoresizingMaskIntoConstraints="NO" id="aT7-Hg-zr9">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="aT7-Hg-zr9">
                                         <rect key="frame" x="38" y="37" width="225" height="225"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="225" id="QNz-0V-vv9"/>
@@ -732,24 +732,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You saved water, bitch." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HnL-3Z-qXw">
-                                <rect key="frame" x="212" y="289" width="176" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bathtub" translatesAutoresizingMaskIntoConstraints="NO" id="qJY-Hv-gGh">
                                 <rect key="frame" x="0.0" y="397" width="600" height="203"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="203" id="6LJ-jn-crR"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRl-Cd-X0U">
+                                <rect key="frame" x="213" y="95" width="148" height="76"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="HnL-3Z-qXw" firstAttribute="centerY" secondItem="ZC0-QT-mhD" secondAttribute="centerY" id="ARx-k7-LAp"/>
                             <constraint firstItem="qJY-Hv-gGh" firstAttribute="leading" secondItem="ZC0-QT-mhD" secondAttribute="leadingMargin" constant="-20" id="Ihe-Ok-ofc"/>
-                            <constraint firstItem="HnL-3Z-qXw" firstAttribute="centerX" secondItem="ZC0-QT-mhD" secondAttribute="centerX" id="Qa9-aE-keA"/>
                             <constraint firstItem="PCP-KM-ABh" firstAttribute="top" secondItem="qJY-Hv-gGh" secondAttribute="bottom" id="dl8-Kn-jtm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qJY-Hv-gGh" secondAttribute="trailing" constant="-20" id="i1l-W0-Wqk"/>
                         </constraints>
@@ -893,9 +891,9 @@
         <image name="7" width="40" height="40"/>
         <image name="bathtub" width="375" height="139"/>
         <image name="close" width="45" height="45"/>
+        <image name="default" width="170" height="170"/>
         <image name="forward" width="50" height="50"/>
         <image name="friends" width="35" height="35"/>
-        <image name="henry" width="427" height="428"/>
         <image name="home" width="35" height="35"/>
         <image name="play" width="100" height="100"/>
         <image name="profile" width="35" height="35"/>

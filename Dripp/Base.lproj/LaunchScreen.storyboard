@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,18 +18,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="faT-I8-qH6">
-                                <rect key="frame" x="125" y="145" width="350" height="311"/>
+                                <rect key="frame" x="125" y="95" width="350" height="311"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="311" id="Slq-4v-5VA"/>
                                     <constraint firstAttribute="width" constant="350" id="jpB-Iq-Y5I"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dripp_name" translatesAutoresizingMaskIntoConstraints="NO" id="qlx-co-urW">
+                                <rect key="frame" x="180" y="414" width="240" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="FVY-CT-zCE"/>
+                                    <constraint firstAttribute="width" constant="240" id="qzH-em-pyC"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.22745098039215686" green="0.55294117647058827" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="qlx-co-urW" firstAttribute="top" secondItem="faT-I8-qH6" secondAttribute="bottom" constant="8" id="7x7-U3-OWZ"/>
+                            <constraint firstItem="qlx-co-urW" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="160" id="dGu-ud-vnT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qlx-co-urW" secondAttribute="trailing" constant="160" id="hOF-MQ-HEb"/>
                             <constraint firstItem="faT-I8-qH6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mwf-hq-5tD"/>
-                            <constraint firstItem="faT-I8-qH6" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="oaV-Ye-hhO"/>
+                            <constraint firstItem="faT-I8-qH6" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="oaV-Ye-hhO"/>
+                            <constraint firstItem="qlx-co-urW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="whm-S6-u7x"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dGu-ud-vnT"/>
+                                <exclude reference="hOF-MQ-HEb"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -37,6 +55,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dripp_name" width="454" height="175"/>
         <image name="splash" width="350" height="311"/>
     </resources>
 </document>

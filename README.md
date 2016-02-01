@@ -29,4 +29,4 @@ As you continue to take shorter and shorter showers, Dripp calculates your water
 
 * Henry Saniuk ([github.com/speakerbug](https://github.com/speakerbug))
 * Brandon Hudson ([github.com/brandonhudson](https://github.com/brandonhudson))
-* Jackie McGraw ([github.com/JacquelineDMcGraw](https://github.com/JacquelineDMcGraw))
+* Jackie McGraw ([behance.net/jackiedmcgraw](https://www.behance.net/jackiedmcgraw))

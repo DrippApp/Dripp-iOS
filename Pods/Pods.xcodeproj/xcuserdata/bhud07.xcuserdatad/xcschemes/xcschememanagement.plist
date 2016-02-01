@@ -19,6 +19,16 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>MBCircularProgressBar-MBCircularProgressBar.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+		<key>MBCircularProgressBar.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -42,6 +52,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>037A4A958EA2A7146B31739F2D44816D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>05389B6A3B3FAD1BF94534B2FA8B25D0</key>
 		<dict>
 			<key>primary</key>
@@ -62,6 +77,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>4D8F68651629565D1140022C3196DFC4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>61639E002F28D690D5BB22E57E39D87A</key>
 		<dict>
 			<key>primary</key>
@@ -72,7 +92,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>860A9179BCFD9F1C616D8653DB2B4F91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FC4B2785BB68892651401B8A26A15AD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A376E868ED408EE8EEBD1DDBCE639EF5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B6DCF32C006E39B28DF64D5102961338</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9EFF6DE5A0C66BB21A0C3FA8C61206E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

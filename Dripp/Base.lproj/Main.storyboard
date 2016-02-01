@@ -65,7 +65,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Friends" id="gGb-Sh-YzG">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qFW-CX-WCb"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="qfY-9P-QcN"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qFW-CX-WCb">
+                            <connections>
+                                <segue destination="1zM-id-dPj" kind="show" id="6xW-7C-PFR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="wWN-sq-gaH" id="eNk-mo-G0H"/>
@@ -74,6 +79,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B65-ZV-29W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1416" y="-1765"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1HQ-Jf-LXJ">
+            <objects>
+                <viewController id="1zM-id-dPj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jM3-Iz-Cth"/>
+                        <viewControllerLayoutGuide type="bottom" id="CAC-Kh-CYS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rno-rs-48L">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kuK-DN-lzp">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="kuK-DN-lzp" firstAttribute="leading" secondItem="Rno-rs-48L" secondAttribute="leadingMargin" constant="-20" id="0IW-sm-soP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kuK-DN-lzp" secondAttribute="trailing" constant="-20" id="FwJ-aX-nkJ"/>
+                            <constraint firstItem="kuK-DN-lzp" firstAttribute="top" secondItem="jM3-Iz-Cth" secondAttribute="bottom" id="fik-cr-feM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ouz-4r-uZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2078" y="-1765"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0nP-Q9-1vu">
@@ -710,6 +744,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="nDc-Vj-Nc9">
                         <barButtonItem key="backBarButtonItem" title="Back" id="U5k-NT-aT2"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="G47-p2-jq0"/>
                     </navigationItem>
                     <connections>
                         <outlet property="profilePicture" destination="aT7-Hg-zr9" id="qGB-Ia-z6l"/>

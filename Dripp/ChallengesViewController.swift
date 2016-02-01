@@ -33,11 +33,13 @@ class ChallengesViewController: UITableViewController {
     }
     
     func loadFriends() {
-        let item = FeedItem(uid: "test", firstName: "Brandon", lastName: "Hudson", data: "Challenged you to shower with the playlist Wild Country.", photo: "http://www.dripp.xyz/assets/10577089_937131712979394_6519832353143327126_n-2.jpg", type: "challenge", notificationID: "6", date: "30m")
+        
+        let item = FeedItem(uid: "test", firstName: "Myke", lastName: "Olson", data: "Challenged you to shower with the playlist Wild Country.", photo: "http://www.dripp.xyz/assets/12143122_588256791313408_8609137715597578781_n.jpg", type: "challenge", notificationID: "6", date: "4h")
         item.unread = true
         friends.append(item)
         friends.append(FeedItem(uid: "test", firstName: "Rachel", lastName: "Kurland", data: "Challenged you to shower with the playlist Soapy.", photo: "http://www.dripp.xyz/assets/speakerbug508c7c185c40ea045a8383ae259bd7cb.jpg", type: "challenge", notificationID: "6", date: "4h"))
-        friends.append(FeedItem(uid: "test", firstName: "Rachel", lastName: "Kurland", data: "Challenged you to shower with the playlist Soapy.", photo: "http://www.dripp.xyz/assets/speakerbug508c7c185c40ea045a8383ae259bd7cb.jpg", type: "challenge", notificationID: "6", date: "4h"))
+        friends.append(FeedItem(uid: "test", firstName: "Brandon", lastName: "Hudson", data: "Challenged you to shower with the playlist Metallica.", photo: "http://www.dripp.xyz/assets/10577089_937131712979394_6519832353143327126_n-2.jpg", type: "challenge", notificationID: "6", date: "30m"))
+        
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

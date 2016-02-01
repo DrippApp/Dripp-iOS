@@ -89,7 +89,7 @@ class FeedViewController: UITableViewController {
         self.refreshColorView.alpha = 0.30
         
         // Create the graphic image views
-        compass_background = UIImageView(image: UIImage.gifWithName("drops"))
+        compass_background = UIImageView(image: UIImage.gifWithName("NEWGIF"))
         
         // Add the graphics to the loading view
         self.refreshLoadingView.addSubview(self.compass_background)

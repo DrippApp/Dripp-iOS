@@ -13,6 +13,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var progressBar: MBCircularProgressBarView!
     
+    @IBOutlet weak var achievements: UIImageView!
     var albums = [String]()
     var names = [String]()
     

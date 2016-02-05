@@ -80,7 +80,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let tabBarController = self.window!.rootViewController as! UITabBarController
-        //let view = self.window!.rootViewController as! UIView
         let tabBar = tabBarController.tabBar as UITabBar
         let inactiveColor = UIColor(hexString: "#91c8fb")
         
@@ -94,21 +93,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Add background color to middle tabBarItem
-        let itemIndex = 2
         let bgColor = UIColor(hexString: "#3983c8")
         
         let itemWidth = tabBar.frame.width / CGFloat(tabBar.items!.count)
-        let bgView = UIView(frame: CGRectMake((itemWidth * CGFloat(itemIndex)+27.5), 0, itemWidth, tabBar.frame.height))
+        let screenHeight = UIScreen.mainScreen().bounds.size.height
+        let screenWidth = UIScreen.mainScreen().bounds.size.width
+        let bgView = UIView(frame: CGRectMake((screenWidth/2) - (itemWidth/2), 0, itemWidth, tabBar.frame.height))
         bgView.backgroundColor = bgColor
         tabBar.insertSubview(bgView, atIndex: 0)
         
-        let bgView2 = UIView(frame: CGRectMake((itemWidth * CGFloat(itemIndex)+27.5), 610, itemWidth, tabBar.frame.height/3))
+        let bgView2 = UIView(frame: CGRectMake((screenWidth/2) - (itemWidth/2), (screenHeight-57), itemWidth, tabBar.frame.height/3))
         bgView2.backgroundColor = bgColor
         bgView2.layer.cornerRadius = bgView2.frame.height/2
         bgView2.layer.masksToBounds = false
         bgView2.clipsToBounds = true
         self.window!.rootViewController!.view.insertSubview(bgView2, aboveSubview: bgView)
-        //bgView2.insertSubview(bgView2, atIndex: 0)
        
         UINavigationBar.appearance().barTintColor = UIColor.blueHeader
         UIToolbar.appearance().barTintColor = UIColor.blueHeader

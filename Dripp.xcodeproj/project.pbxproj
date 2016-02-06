@@ -42,6 +42,7 @@
 		5492EC4E1C5DCCEB00A97F06 /* ShowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC4D1C5DCCEB00A97F06 /* ShowerCell.swift */; };
 		5492EC501C5DCE0500A97F06 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC4F1C5DCE0500A97F06 /* Playlist.swift */; };
 		5492EC521C5DE77200A97F06 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5492EC511C5DE77200A97F06 /* WatchConnectivity.framework */; };
+		54EFBE6E1C65C695008BCE7A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EFBE6D1C65C695008BCE7A /* FBSDKCoreKit.framework */; };
 		61489BC45D92687FCC10AD2A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A333912402514296D82CBFD /* Pods.framework */; };
 		A95E24721C5DC3AF00FE81BF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A95E24701C5DC3AF00FE81BF /* Interface.storyboard */; };
 		A95E24741C5DC3AF00FE81BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95E24731C5DC3AF00FE81BF /* Assets.xcassets */; };
@@ -153,6 +154,7 @@
 		5492EC4D1C5DCCEB00A97F06 /* ShowerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowerCell.swift; sourceTree = "<group>"; };
 		5492EC4F1C5DCE0500A97F06 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		5492EC511C5DE77200A97F06 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		54EFBE6D1C65C695008BCE7A /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		89AC20D05B519CBA808E268B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8A333912402514296D82CBFD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95E246E1C5DC3AF00FE81BF /* DrippWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrippWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5492EC521C5DE77200A97F06 /* WatchConnectivity.framework in Frameworks */,
+				54EFBE6E1C65C695008BCE7A /* FBSDKCoreKit.framework in Frameworks */,
 				61489BC45D92687FCC10AD2A /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +243,7 @@
 				5492EC441C5CD38A00A97F06 /* Objects */,
 				5492EC451C5CD3A000A97F06 /* Supporting Files */,
 				5492EBE11C5B271600A97F06 /* Main.storyboard */,
+				54EFBE6D1C65C695008BCE7A /* FBSDKCoreKit.framework */,
 				5492EBE41C5B271600A97F06 /* Assets.xcassets */,
 				5492EBE61C5B271600A97F06 /* LaunchScreen.storyboard */,
 				5492EC1D1C5BF67E00A97F06 /* Audio Files */,
@@ -321,7 +325,7 @@
 				5492EC3F1C5CD0B800A97F06 /* Dates.swift */,
 				5492EC2A1C5C1D8200A97F06 /* UIImageColors.swift */,
 				5492EC4B1C5DCAF800A97F06 /* ToolbarManager.swift */,
-				542CD04A1C5F1364006C7A99 /* NEWGIF.gif */,
+				549A2B971C65260E003825C0 /* Gifs */,
 				5492EC361C5C77D500A97F06 /* Water */,
 			);
 			name = "Supporting Files";
@@ -364,6 +368,14 @@
 				542CD0481C5F0C2B006C7A99 /* WebViewController.swift */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		549A2B971C65260E003825C0 /* Gifs */ = {
+			isa = PBXGroup;
+			children = (
+				542CD04A1C5F1364006C7A99 /* NEWGIF.gif */,
+			);
+			name = Gifs;
 			sourceTree = "<group>";
 		};
 		77AFF41EBF07B5752532C5BD /* Pods */ = {
@@ -851,6 +863,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dripp",
+				);
 				INFOPLIST_FILE = Dripp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -868,6 +884,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dripp",
+				);
 				INFOPLIST_FILE = Dripp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

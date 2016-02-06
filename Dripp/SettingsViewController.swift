@@ -21,7 +21,11 @@ class SettingsViewController: UITableViewController {
         if let section = SettingsTableSection(rawValue: indexPath.section) {
             switch section {
             case .AccountSettings:
-                //self.performSegueWithIdentifier("logout", sender: self)
+                let objFBSDKLoginManager: FBSDKLoginManager = FBSDKLoginManager()
+                objFBSDKLoginManager.logOut()
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewControllerWithIdentifier("loginViewController")
+                self.presentViewController(vc, animated: true, completion: nil)
                 print("log out")
             case .ContactUs:
                 let email = "dripp@csh.rit.edu"

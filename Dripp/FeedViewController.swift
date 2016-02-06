@@ -29,7 +29,7 @@ class FeedViewController: UITableViewController {
     var isRefreshAnimating = false
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        
         tableView.tableFooterView = UIView()
         self.view.backgroundColor = UIColor(hexString: "#f1f1f1")
         loadFeed()
@@ -45,6 +45,15 @@ class FeedViewController: UITableViewController {
         //register table cell
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.setupRefreshControl()
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if !isLoggedIn() {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("loginViewController")
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
     }
     
     func loadFeed() {
@@ -129,44 +138,6 @@ class FeedViewController: UITableViewController {
         
         // Get the current size of the refresh controller
         let refreshBounds = self.refreshControl!.bounds;
-//
-//        // Distance the table has been pulled >= 0
-//        let pullDistance = max(0.0, -self.refreshControl!.frame.origin.y);
-//        
-//        // Half the width of the table
-//        let midX = self.tableView.frame.size.width / 2.0;
-//        
-//        // Calculate the width and height of our graphics
-//        let compassHeight = self.compass_background.bounds.size.height;
-//        let compassHeightHalf = compassHeight / 2.0;
-//        
-//        let compassWidth = self.compass_background.bounds.size.width;
-//        let compassWidthHalf = compassWidth / 2.0;
-//        
-//        // Calculate the pull ratio, between 0.0-1.0
-//        let pullRatio = min( max(pullDistance, 0.0), 100.0) / 100.0;
-//        
-//        // Set the Y coord of the graphics, based on pull distance
-//        let compassY = pullDistance / 2.0 - compassHeightHalf;
-//        
-//        // Calculate the X coord of the graphics, adjust based on pull ratio
-//        var compassX = (midX + compassWidthHalf) - (compassWidth * pullRatio);
-//        
-//        // If the graphics have overlapped or we are refreshing, keep them together
-//        if (self.isRefreshIconsOverlap || self.refreshControl!.refreshing) {
-//            compassX = midX - compassWidthHalf;
-//        }
-//        
-//        // Set the graphic's frames
-//        var compassFrame = self.compass_background.frame;
-//        compassFrame.origin.x = compassX;
-//        compassFrame.origin.y = compassY;
-//        
-//        self.compass_background.frame = compassFrame;
-//        
-//        // Set the encompassing view's frames
-//        refreshBounds.size.height = pullDistance;
-        
         self.refreshColorView.frame = refreshBounds;
         self.refreshLoadingView.frame = refreshBounds;
         

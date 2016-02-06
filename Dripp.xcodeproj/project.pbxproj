@@ -46,6 +46,8 @@
 		54EFBE701C65C7DD008BCE7A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EFBE6F1C65C7DD008BCE7A /* Bolts.framework */; };
 		54EFBE721C65C7E9008BCE7A /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EFBE711C65C7E9008BCE7A /* FBSDKLoginKit.framework */; };
 		54EFBE751C65C92D008BCE7A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFBE741C65C92C008BCE7A /* LoginViewController.swift */; };
+		54EFBE771C65CC60008BCE7A /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFBE761C65CC60008BCE7A /* ApiKeys.swift */; };
+		54EFBE791C65CC8A008BCE7A /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EFBE781C65CC8A008BCE7A /* ApiKeys.plist */; };
 		61489BC45D92687FCC10AD2A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A333912402514296D82CBFD /* Pods.framework */; };
 		A95E24721C5DC3AF00FE81BF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A95E24701C5DC3AF00FE81BF /* Interface.storyboard */; };
 		A95E24741C5DC3AF00FE81BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95E24731C5DC3AF00FE81BF /* Assets.xcassets */; };
@@ -161,6 +163,8 @@
 		54EFBE6F1C65C7DD008BCE7A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		54EFBE711C65C7E9008BCE7A /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		54EFBE741C65C92C008BCE7A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		54EFBE761C65CC60008BCE7A /* ApiKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
+		54EFBE781C65CC8A008BCE7A /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		89AC20D05B519CBA808E268B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8A333912402514296D82CBFD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95E246E1C5DC3AF00FE81BF /* DrippWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrippWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,6 +397,8 @@
 			isa = PBXGroup;
 			children = (
 				54EFBE741C65C92C008BCE7A /* LoginViewController.swift */,
+				54EFBE781C65CC8A008BCE7A /* ApiKeys.plist */,
+				54EFBE761C65CC60008BCE7A /* ApiKeys.swift */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -595,6 +601,7 @@
 				5492EBE81C5B271600A97F06 /* LaunchScreen.storyboard in Resources */,
 				5492EBE51C5B271600A97F06 /* Assets.xcassets in Resources */,
 				542CD04B1C5F1364006C7A99 /* NEWGIF.gif in Resources */,
+				54EFBE791C65CC8A008BCE7A /* ApiKeys.plist in Resources */,
 				5492EBE31C5B271600A97F06 /* Main.storyboard in Resources */,
 				5492EC1C1C5BF64F00A97F06 /* sample.mp3 in Resources */,
 			);
@@ -688,6 +695,7 @@
 			files = (
 				5492EC101C5B2EB500A97F06 /* ShowerViewController.swift in Sources */,
 				542CD0451C5EBDD2006C7A99 /* AchievementCell.swift in Sources */,
+				54EFBE771C65CC60008BCE7A /* ApiKeys.swift in Sources */,
 				542CD03F1C5E1BCE006C7A99 /* ShowerStatsViewController.swift in Sources */,
 				5492EC4E1C5DCCEB00A97F06 /* ShowerCell.swift in Sources */,
 				5492EC3A1C5CA8D700A97F06 /* ChallengesViewController.swift in Sources */,

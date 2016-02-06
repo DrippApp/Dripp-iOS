@@ -32,6 +32,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print("User Logged In")
+        self.dismissViewControllerAnimated(true, completion: nil)
         
         if ((error) != nil)
         {
@@ -69,8 +70,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 print("fetched user: \(result)")
                 let userName : NSString = result.valueForKey("name") as! NSString
                 print("User Name is: \(userName)")
-                let userEmail : NSString = result.valueForKey("email") as! NSString
-                print("User Email is: \(userEmail)")
             }
         })
     }

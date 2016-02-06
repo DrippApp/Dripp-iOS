@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 enum SettingsTableSection: Int {
     case AccountSettings

@@ -2,6 +2,7 @@ PODS:
   - Alamofire (3.1.5)
   - EasyAnimation (1.0.2)
   - HanekeSwift (0.10.1)
+  - KeychainAccess (2.3.3)
   - MBCircularProgressBar (0.3.4)
   - SABlurImageView (2.1.0)
   - SwiftGifOrigin (1.5.2)
@@ -11,6 +12,7 @@ DEPENDENCIES:
   - Alamofire
   - EasyAnimation
   - HanekeSwift
+  - KeychainAccess
   - MBCircularProgressBar
   - SABlurImageView
   - SwiftGifOrigin
@@ -20,6 +22,7 @@ SPEC CHECKSUMS:
   Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
   EasyAnimation: 9615e40f58aa7d8d6a67de66e0edda1903ffa990
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
+  KeychainAccess: 9b7e49e48277e329b1b3195e54697ed313d30acf
   MBCircularProgressBar: ff3b8e2f441214d9ee122a24ba0d4d00cc7de881
   SABlurImageView: 869da4e0b80e60b21b05d98509de98d0221c15d5
   SwiftGifOrigin: a7671a6a68a2769e118c7da5bcc7c480798907b5

@@ -21,8 +21,7 @@ class SettingsViewController: UITableViewController {
         if let section = SettingsTableSection(rawValue: indexPath.section) {
             switch section {
             case .AccountSettings:
-                let objFBSDKLoginManager: FBSDKLoginManager = FBSDKLoginManager()
-                objFBSDKLoginManager.logOut()
+                AuthenticationManager.sharedManager.logout()
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewControllerWithIdentifier("loginViewController")
                 self.presentViewController(vc, animated: true, completion: nil)

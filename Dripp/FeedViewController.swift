@@ -49,7 +49,7 @@ class FeedViewController: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        if !isLoggedIn() {
+        if !AuthenticationManager.sharedManager.isLoggedIn {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewControllerWithIdentifier("loginViewController")
             self.presentViewController(vc, animated: true, completion: nil)

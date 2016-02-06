@@ -154,7 +154,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 annotation: annotation)
     }
     
-
-
 }
-

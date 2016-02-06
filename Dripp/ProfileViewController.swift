@@ -8,6 +8,7 @@
 
 import UIKit
 import MBCircularProgressBar
+import Haneke
 
 class ProfileViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var profilePicture: UIImageView!
@@ -20,13 +21,29 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        profilePicture.image = UIImage(named: "henry")
+        profilePicture.image = UIImage(named: "default")
         profilePicture.layer.borderWidth = 1
         profilePicture.layer.borderColor = UIColor.lightGrayColor().CGColor
         profilePicture.layer.cornerRadius = profilePicture.frame.height/2
         profilePicture.layer.masksToBounds = false
         profilePicture.clipsToBounds = true
-        self.navigationItem.title = "Henry Saniuk"
+        self.navigationItem.title = ""
+        let params = ["fields": "name, id"]
+        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: params)
+        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+            
+            if ((error) != nil)
+            {
+                // Process error
+                print("Error: \(error)")
+            }
+            else
+            {
+                let id = result.valueForKey("id") as! NSString as String
+                self.profilePicture.hnk_setImageFromURL(NSURL(string: "https://graph.facebook.com/\(id)/picture?type=large&return_ssl_resources=1")!)
+                self.navigationItem.title = result.valueForKey("name") as! NSString as String
+            }
+        })
         self.progressBar.progressColor = UIColor.blueHeader
         self.progressBar.progressStrokeColor = UIColor.blueHeader
         albums = ["a.png",  "b.png", "c.png", "d.png", "e.png", "f.png", "g.png", "h.png", "i.png", "j.png", "k.png", "l.png", "m.png"]

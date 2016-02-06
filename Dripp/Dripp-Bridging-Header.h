@@ -5,3 +5,5 @@
 #import "WaterView.h"
 #import "MBCircularProgressBar/MBCircularProgressBarLayer.h"
 #import "MBCircularProgressBar/MBCircularProgressBarView.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>

@@ -43,6 +43,8 @@
 		5492EC501C5DCE0500A97F06 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EC4F1C5DCE0500A97F06 /* Playlist.swift */; };
 		5492EC521C5DE77200A97F06 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5492EC511C5DE77200A97F06 /* WatchConnectivity.framework */; };
 		54EFBE6E1C65C695008BCE7A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EFBE6D1C65C695008BCE7A /* FBSDKCoreKit.framework */; };
+		54EFBE701C65C7DD008BCE7A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EFBE6F1C65C7DD008BCE7A /* Bolts.framework */; };
+		54EFBE721C65C7E9008BCE7A /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EFBE711C65C7E9008BCE7A /* FBSDKLoginKit.framework */; };
 		61489BC45D92687FCC10AD2A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A333912402514296D82CBFD /* Pods.framework */; };
 		A95E24721C5DC3AF00FE81BF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A95E24701C5DC3AF00FE81BF /* Interface.storyboard */; };
 		A95E24741C5DC3AF00FE81BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95E24731C5DC3AF00FE81BF /* Assets.xcassets */; };
@@ -155,6 +157,8 @@
 		5492EC4F1C5DCE0500A97F06 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		5492EC511C5DE77200A97F06 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		54EFBE6D1C65C695008BCE7A /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		54EFBE6F1C65C7DD008BCE7A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		54EFBE711C65C7E9008BCE7A /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		89AC20D05B519CBA808E268B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8A333912402514296D82CBFD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95E246E1C5DC3AF00FE81BF /* DrippWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrippWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,7 +179,9 @@
 			files = (
 				5492EC521C5DE77200A97F06 /* WatchConnectivity.framework in Frameworks */,
 				54EFBE6E1C65C695008BCE7A /* FBSDKCoreKit.framework in Frameworks */,
+				54EFBE721C65C7E9008BCE7A /* FBSDKLoginKit.framework in Frameworks */,
 				61489BC45D92687FCC10AD2A /* Pods.framework in Frameworks */,
+				54EFBE701C65C7DD008BCE7A /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +249,8 @@
 				5492EC441C5CD38A00A97F06 /* Objects */,
 				5492EC451C5CD3A000A97F06 /* Supporting Files */,
 				5492EBE11C5B271600A97F06 /* Main.storyboard */,
+				54EFBE711C65C7E9008BCE7A /* FBSDKLoginKit.framework */,
+				54EFBE6F1C65C7DD008BCE7A /* Bolts.framework */,
 				54EFBE6D1C65C695008BCE7A /* FBSDKCoreKit.framework */,
 				5492EBE41C5B271600A97F06 /* Assets.xcassets */,
 				5492EBE61C5B271600A97F06 /* LaunchScreen.storyboard */,

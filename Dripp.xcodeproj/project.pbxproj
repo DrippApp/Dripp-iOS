@@ -49,7 +49,6 @@
 		54EFBE771C65CC60008BCE7A /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFBE761C65CC60008BCE7A /* ApiKeys.swift */; };
 		54EFBE791C65CC8A008BCE7A /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EFBE781C65CC8A008BCE7A /* ApiKeys.plist */; };
 		54EFBE7B1C66A98A008BCE7A /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFBE7A1C66A98A008BCE7A /* AuthenticationManager.swift */; };
-		54EFBE7D1C66B269008BCE7A /* CurrentUserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFBE7C1C66B269008BCE7A /* CurrentUserInformation.swift */; };
 		61489BC45D92687FCC10AD2A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A333912402514296D82CBFD /* Pods.framework */; };
 		A95E24721C5DC3AF00FE81BF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A95E24701C5DC3AF00FE81BF /* Interface.storyboard */; };
 		A95E24741C5DC3AF00FE81BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95E24731C5DC3AF00FE81BF /* Assets.xcassets */; };
@@ -168,7 +167,6 @@
 		54EFBE761C65CC60008BCE7A /* ApiKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
 		54EFBE781C65CC8A008BCE7A /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		54EFBE7A1C66A98A008BCE7A /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
-		54EFBE7C1C66B269008BCE7A /* CurrentUserInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserInformation.swift; sourceTree = "<group>"; };
 		89AC20D05B519CBA808E268B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8A333912402514296D82CBFD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95E246E1C5DC3AF00FE81BF /* DrippWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrippWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -404,7 +402,6 @@
 				54EFBE7A1C66A98A008BCE7A /* AuthenticationManager.swift */,
 				54EFBE781C65CC8A008BCE7A /* ApiKeys.plist */,
 				54EFBE761C65CC60008BCE7A /* ApiKeys.swift */,
-				54EFBE7C1C66B269008BCE7A /* CurrentUserInformation.swift */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -721,7 +718,6 @@
 				5492EC0C1C5B2E9700A97F06 /* FeedViewController.swift in Sources */,
 				5492EC351C5C77CE00A97F06 /* WaterView.m in Sources */,
 				5492EC121C5B2ECE00A97F06 /* ProfileViewController.swift in Sources */,
-				54EFBE7D1C66B269008BCE7A /* CurrentUserInformation.swift in Sources */,
 				5492EC401C5CD0B800A97F06 /* Dates.swift in Sources */,
 				5492EC2F1C5C2A2D00A97F06 /* Song.swift in Sources */,
 				542CD0411C5E8B8F006C7A99 /* ChallengeCell.swift in Sources */,

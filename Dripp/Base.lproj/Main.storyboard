@@ -66,11 +66,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Friends" id="gGb-Sh-YzG">
                         <barButtonItem key="backBarButtonItem" title="Back" id="qfY-9P-QcN"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qFW-CX-WCb">
-                            <connections>
-                                <segue destination="1zM-id-dPj" kind="show" id="6xW-7C-PFR"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="wWN-sq-gaH" id="eNk-mo-G0H"/>
@@ -764,7 +759,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="nDc-Vj-Nc9">
                         <barButtonItem key="backBarButtonItem" title="Back" id="U5k-NT-aT2"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="G47-p2-jq0"/>
                     </navigationItem>
                     <connections>
                         <outlet property="achievements" destination="mYe-pA-OJ3" id="BC6-tW-ZXc"/>

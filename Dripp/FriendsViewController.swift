@@ -49,32 +49,11 @@ class FriendsViewController: UITableViewController {
 
     }
     
-//    func loadFriends() {
-//        Alamofire.request(.GET, "http://api.dripp.xyz/user/16/connections",
-//            parameters: ["api": true])
-//            .responseJSON { response in
-//                if response.result.isSuccess {
-//                    if let data: AnyObject = response.result.value! {
-//                        let json = JSON(data)
-//                        let array = json["data"].arrayValue
-//                        self.friends = array.map {
-//                            Dripper(json: $0)
-//                        }
-//                        self.table.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
-//                    }
-//                }
-//        }
-//    }
-    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
         return friends.count
     }
     
@@ -95,6 +74,9 @@ class FriendsViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let VC1 = self.storyboard!.instantiateViewControllerWithIdentifier("profile") as! ProfileViewController
+        VC1.id = friends[indexPath.row].uid
+        self.navigationController!.pushViewController(VC1, animated: true)
     }
     
     
@@ -115,7 +97,6 @@ class FriendsViewController: UITableViewController {
             
         }
         challenge.backgroundColor = UIColor.blueHeader
-        
         
         return [challenge]
     }

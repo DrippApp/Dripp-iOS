@@ -647,7 +647,7 @@
         <!--Profile-->
         <scene sceneID="Dl4-qQ-zZl">
             <objects>
-                <viewController id="MKw-kH-QLX" customClass="ProfileViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profile" id="MKw-kH-QLX" customClass="ProfileViewController" customModule="Dripp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vdt-d0-LXj"/>
                         <viewControllerLayoutGuide type="bottom" id="9dn-SL-52a"/>

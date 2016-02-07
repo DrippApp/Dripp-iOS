@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var achievements: UIImageView!
     var albums = [String]()
     var names = [String]()
+    var id = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,13 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate {
         profilePicture.clipsToBounds = true
         self.navigationItem.title = ""
         let params = ["fields": "name, id"]
-        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: params)
+        let graphPath: String
+        if id == "" {
+            graphPath = "me"
+        } else {
+            graphPath = id
+        }
+        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: graphPath, parameters: params)
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
             if ((error) != nil)

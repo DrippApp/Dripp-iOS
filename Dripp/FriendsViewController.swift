@@ -18,27 +18,53 @@ class FriendsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadFriends()
         tableView.tableFooterView = UIView()
         self.view.backgroundColor = UIColor(hexString: "#f1f1f1")
+        let params = ["fields": "name, id, friends"]
+        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: params)
+        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+            
+            if ((error) != nil)
+            {
+                // Process error
+                print("Error: \(error)")
+            }
+            else
+            {
+                let friends = result.valueForKey("friends")
+                let data : NSArray = friends!.objectForKey("data") as! NSArray
+                
+                for i in 0 ..< data.count
+                {
+                    let valueDict : NSDictionary = data[i] as! NSDictionary
+                    let id = valueDict.objectForKey("id") as! String
+                    let name = valueDict.objectForKey("name") as! String
+                    self.friends.append(Dripper(uid: id, firstName: name, lastName: "", email: "", photo: "https://graph.facebook.com/\(id)/picture?type=large&return_ssl_resources=1", accountType: "", lowestShowerLength: "", savedWater: ""))
+                    print("the id value is \(id)")
+                }
+                self.table.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
+                
+            }
+        })
+
     }
     
-    func loadFriends() {
-        Alamofire.request(.GET, "http://api.dripp.xyz/user/16/connections",
-            parameters: ["api": true])
-            .responseJSON { response in
-                if response.result.isSuccess {
-                    if let data: AnyObject = response.result.value! {
-                        let json = JSON(data)
-                        let array = json["data"].arrayValue
-                        self.friends = array.map {
-                            Dripper(json: $0)
-                        }
-                        self.table.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
-                    }
-                }
-        }
-    }
+//    func loadFriends() {
+//        Alamofire.request(.GET, "http://api.dripp.xyz/user/16/connections",
+//            parameters: ["api": true])
+//            .responseJSON { response in
+//                if response.result.isSuccess {
+//                    if let data: AnyObject = response.result.value! {
+//                        let json = JSON(data)
+//                        let array = json["data"].arrayValue
+//                        self.friends = array.map {
+//                            Dripper(json: $0)
+//                        }
+//                        self.table.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
+//                    }
+//                }
+//        }
+//    }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.

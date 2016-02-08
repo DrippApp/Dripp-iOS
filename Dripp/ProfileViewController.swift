@@ -12,8 +12,12 @@ import Haneke
 
 class ProfileViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var currentLevel: UIImageView!
+    @IBOutlet weak var nextLevel: UIImageView!
+    @IBOutlet weak var nextLevelText: UILabel!
     @IBOutlet weak var progressBar: MBCircularProgressBarView!
     
+    @IBOutlet weak var currentLevelText: UILabel!
     @IBOutlet weak var achievements: UIImageView!
     var albums = [String]()
     var names = [String]()
@@ -29,11 +33,17 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate {
         profilePicture.layer.masksToBounds = false
         profilePicture.clipsToBounds = true
         self.navigationItem.title = ""
+        //level
+        currentLevelText.text = "1"
+        nextLevelText.text = "2"
+        
         let params = ["fields": "name, id"]
         let graphPath: String
         if id == "" {
+            //get the profile of the current user
             graphPath = "me"
         } else {
+            //get the profile of another user
             graphPath = id
         }
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: graphPath, parameters: params)
@@ -51,8 +61,9 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate {
                 self.navigationItem.title = result.valueForKey("name") as! NSString as String
             }
         })
-        self.progressBar.progressColor = UIColor.blueHeader
-        self.progressBar.progressStrokeColor = UIColor.blueHeader
+        let progressBlue = UIColor(hexString: "#4E8DCB")
+        self.progressBar.progressColor = progressBlue
+        self.progressBar.progressStrokeColor = progressBlue
         albums = ["a.png",  "b.png", "c.png", "d.png", "e.png", "f.png", "g.png", "h.png", "i.png", "j.png", "k.png", "l.png", "m.png"]
         names = ["a.png",  "b.png", "c.png", "d.png", "e.png", "f.png", "g.png", "h.png", "i.png", "j.png", "k.png", "l.png", "m.png"]
         

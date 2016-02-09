@@ -87,7 +87,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" text="" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="kuK-DN-lzp">
+                            <searchBar contentMode="redraw" misplaced="YES" text="" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="kuK-DN-lzp">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -742,12 +742,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="achievement" translatesAutoresizingMaskIntoConstraints="NO" id="mYe-pA-OJ3">
-                                <rect key="frame" x="0.0" y="301" width="600" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="Nch-8c-deF"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P29-03-vFI">
                                 <rect key="frame" x="0.0" y="330" width="600" height="1"/>
                                 <color key="backgroundColor" red="0.7876643270944742" green="0.7876643270944742" blue="0.7876643270944742" alpha="1" colorSpace="calibratedRGB"/>
@@ -755,20 +749,61 @@
                                     <constraint firstAttribute="height" constant="1" id="Iov-QV-fjk"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tk4-ZQ-fYt">
+                                <rect key="frame" x="15" y="345" width="573" height="191"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m3b-nY-ExW">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="achievement" id="fyj-tv-njv" customClass="AchievementCell" customModule="Dripp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="46" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b4q-x5-cRP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="b4q-x5-cRP" secondAttribute="trailing" constant="-8" id="2IY-pZ-oLU"/>
+                                            <constraint firstItem="b4q-x5-cRP" firstAttribute="top" secondItem="fyj-tv-njv" secondAttribute="topMargin" constant="-8" id="7YY-h1-HHr"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="b4q-x5-cRP" secondAttribute="bottom" constant="-8" id="dRS-Gh-Lax"/>
+                                            <constraint firstItem="b4q-x5-cRP" firstAttribute="leading" secondItem="fyj-tv-njv" secondAttribute="leadingMargin" constant="-8" id="gUi-TW-vNm"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="image" destination="b4q-x5-cRP" id="DAx-xW-EYX"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="MKw-kH-QLX" id="q3m-g1-fx5"/>
+                                    <outlet property="delegate" destination="MKw-kH-QLX" id="lhg-01-DRg"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="mYe-pA-OJ3" secondAttribute="trailing" constant="-20" id="1ue-3R-Gtk"/>
                             <constraint firstItem="gyx-Ic-Usg" firstAttribute="centerX" secondItem="UMk-Gz-bSj" secondAttribute="centerX" id="5Py-qk-1IJ"/>
+                            <constraint firstItem="tk4-ZQ-fYt" firstAttribute="top" secondItem="P29-03-vFI" secondAttribute="bottom" constant="14" id="7N5-vq-Xgf"/>
                             <constraint firstItem="gyx-Ic-Usg" firstAttribute="top" secondItem="Vdt-d0-LXj" secondAttribute="bottom" constant="24" id="E4S-UR-HD1"/>
                             <constraint firstItem="gyx-Ic-Usg" firstAttribute="top" secondItem="Vdt-d0-LXj" secondAttribute="bottom" constant="10" id="Jwq-sk-2pD"/>
-                            <constraint firstItem="mYe-pA-OJ3" firstAttribute="leading" secondItem="UMk-Gz-bSj" secondAttribute="leadingMargin" constant="-20" id="Mw9-xv-8bW"/>
                             <constraint firstItem="P29-03-vFI" firstAttribute="centerY" secondItem="UMk-Gz-bSj" secondAttribute="centerY" constant="30" id="VnF-wV-SBU"/>
-                            <constraint firstItem="9dn-SL-52a" firstAttribute="top" secondItem="mYe-pA-OJ3" secondAttribute="bottom" id="XJt-4o-0Wl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tk4-ZQ-fYt" secondAttribute="trailing" constant="-8" id="Xwp-DK-GpU"/>
+                            <constraint firstItem="9dn-SL-52a" firstAttribute="top" secondItem="tk4-ZQ-fYt" secondAttribute="bottom" constant="15" id="bnZ-7j-OaA"/>
                             <constraint firstItem="P29-03-vFI" firstAttribute="leading" secondItem="UMk-Gz-bSj" secondAttribute="leadingMargin" constant="-20" id="fvd-xW-Qj4"/>
                             <constraint firstItem="gyx-Ic-Usg" firstAttribute="leading" secondItem="UMk-Gz-bSj" secondAttribute="leadingMargin" constant="170" id="hBz-Qf-Weq"/>
+                            <constraint firstItem="tk4-ZQ-fYt" firstAttribute="top" secondItem="F0j-df-mrp" secondAttribute="bottom" constant="7" id="lmw-5A-QrU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="P29-03-vFI" secondAttribute="trailing" constant="-20" id="o0v-qp-41E"/>
                             <constraint firstItem="gyx-Ic-Usg" firstAttribute="centerY" secondItem="UMk-Gz-bSj" secondAttribute="centerY" constant="-63" id="qab-cB-NJP"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="tk4-ZQ-fYt" secondAttribute="leading" constant="5" id="u8c-gw-Y1k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gyx-Ic-Usg" secondAttribute="trailing" constant="169" id="xaB-06-xOZ"/>
                             <constraint firstItem="P29-03-vFI" firstAttribute="centerX" secondItem="UMk-Gz-bSj" secondAttribute="centerX" id="yQE-Rn-vgU"/>
                         </constraints>
@@ -778,6 +813,7 @@
                                 <exclude reference="hBz-Qf-Weq"/>
                                 <exclude reference="qab-cB-NJP"/>
                                 <exclude reference="xaB-06-xOZ"/>
+                                <exclude reference="lmw-5A-QrU"/>
                             </mask>
                         </variation>
                     </view>
@@ -785,7 +821,6 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="U5k-NT-aT2"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="achievements" destination="mYe-pA-OJ3" id="BC6-tW-ZXc"/>
                         <outlet property="currentLevel" destination="U1O-oG-N6m" id="cdI-7K-L3F"/>
                         <outlet property="currentLevelText" destination="Sfh-4O-Sf0" id="QSP-U1-Eob"/>
                         <outlet property="nextLevel" destination="2Pf-FG-93Q" id="5jh-4L-nJ4"/>
@@ -1019,7 +1054,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="achievement" width="375" height="250"/>
         <image name="close" width="45" height="45"/>
         <image name="default" width="170" height="170"/>
         <image name="forward" width="50" height="50"/>

@@ -18,9 +18,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var progressBar: MBCircularProgressBarView!
     
     @IBOutlet weak var currentLevelText: UILabel!
-    @IBOutlet weak var achievements: UIImageView!
-    var albums = [String]()
-    var names = [String]()
+    var achievements = [String]()
     var id = ""
     
     override func viewDidLoad() {
@@ -64,22 +62,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate {
         let progressBlue = UIColor(hexString: "#4E8DCB")
         self.progressBar.progressColor = progressBlue
         self.progressBar.progressStrokeColor = progressBlue
-        albums = ["a.png",  "b.png", "c.png", "d.png", "e.png", "f.png", "g.png", "h.png", "i.png", "j.png", "k.png", "l.png", "m.png"]
-        names = ["a.png",  "b.png", "c.png", "d.png", "e.png", "f.png", "g.png", "h.png", "i.png", "j.png", "k.png", "l.png", "m.png"]
-        
-        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:Selector("imageTapped:"))
-        achievements.userInteractionEnabled = true
-        achievements.addGestureRecognizer(tapGestureRecognizer)
-    }
-    
-    func imageTapped(img: AnyObject)
-    {
-        let alert = UIAlertController(title: "Power Shower", message: "You took a shower in less than 10 minutes!", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Sweet", style: UIAlertActionStyle.Default, handler: { alertAction in
-            alert.dismissViewControllerAnimated(true, completion: nil)
-        }))
-        self.presentViewController(alert, animated: true, completion: nil)
-        
+        achievements = ["a.png",  "b.png", "c.png", "d.png", "e.png", "f.png", "g.png", "h.png", "i.png", "j.png", "k.png", "l.png", "m.png"]
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -90,20 +73,25 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate {
         return 1
     }
     
-    
     func collectionView(collectionView: UICollectionView?, numberOfItemsInSection section: Int) -> Int {
-        return albums.count
+        return achievements.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Achievement", forIndexPath: indexPath) as! AchievementCell
-        cell.backgroundView = UIImageView(image: UIImage(named: "photo-frame.png")) as UIView
-        cell.image?.image = UIImage(named: albums[indexPath.row])
-        cell.name?.text = names[indexPath.row]
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("achievement", forIndexPath: indexPath) as! AchievementCell
+        cell.image?.image = UIImage(named: "shower")
         return cell
     }
-
     
-    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let achievement = achievements[indexPath.item]
+        
+        let alert = UIAlertController(title: "Power Shower", message: "You took a shower in less than 10 minutes! \(achievement)", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Sweet", style: UIAlertActionStyle.Default, handler: { alertAction in
+            alert.dismissViewControllerAnimated(true, completion: nil)
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
 }

@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		542CD03F1C5E1BCE006C7A99 /* ShowerStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542CD03E1C5E1BCE006C7A99 /* ShowerStatsViewController.swift */; };
 		542CD0411C5E8B8F006C7A99 /* ChallengeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542CD0401C5E8B8F006C7A99 /* ChallengeCell.swift */; };
-		542CD0431C5EBDBC006C7A99 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542CD0421C5EBDBC006C7A99 /* AchievementsViewController.swift */; };
 		542CD0451C5EBDD2006C7A99 /* AchievementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542CD0441C5EBDD2006C7A99 /* AchievementCell.swift */; };
 		542CD0491C5F0C2B006C7A99 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542CD0481C5F0C2B006C7A99 /* WebViewController.swift */; };
 		542CD04B1C5F1364006C7A99 /* NEWGIF.gif in Resources */ = {isa = PBXBuildFile; fileRef = 542CD04A1C5F1364006C7A99 /* NEWGIF.gif */; };
+		543485691C6AADF900184127 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 543485681C6AADF900184127 /* ApiKeys.plist */; };
 		5492EBDC1C5B271600A97F06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EBDB1C5B271600A97F06 /* AppDelegate.swift */; };
 		5492EBE31C5B271600A97F06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5492EBE11C5B271600A97F06 /* Main.storyboard */; };
 		5492EBE51C5B271600A97F06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5492EBE41C5B271600A97F06 /* Assets.xcassets */; };
@@ -47,7 +47,6 @@
 		54EFBE721C65C7E9008BCE7A /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EFBE711C65C7E9008BCE7A /* FBSDKLoginKit.framework */; };
 		54EFBE751C65C92D008BCE7A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFBE741C65C92C008BCE7A /* LoginViewController.swift */; };
 		54EFBE771C65CC60008BCE7A /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFBE761C65CC60008BCE7A /* ApiKeys.swift */; };
-		54EFBE791C65CC8A008BCE7A /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EFBE781C65CC8A008BCE7A /* ApiKeys.plist */; };
 		54EFBE7B1C66A98A008BCE7A /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFBE7A1C66A98A008BCE7A /* AuthenticationManager.swift */; };
 		61489BC45D92687FCC10AD2A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A333912402514296D82CBFD /* Pods.framework */; };
 		A95E24721C5DC3AF00FE81BF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A95E24701C5DC3AF00FE81BF /* Interface.storyboard */; };
@@ -119,10 +118,10 @@
 		4449194B6E0BC127F9E52C13 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		542CD03E1C5E1BCE006C7A99 /* ShowerStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowerStatsViewController.swift; sourceTree = "<group>"; };
 		542CD0401C5E8B8F006C7A99 /* ChallengeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeCell.swift; sourceTree = "<group>"; };
-		542CD0421C5EBDBC006C7A99 /* AchievementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
 		542CD0441C5EBDD2006C7A99 /* AchievementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementCell.swift; sourceTree = "<group>"; };
 		542CD0481C5F0C2B006C7A99 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		542CD04A1C5F1364006C7A99 /* NEWGIF.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = NEWGIF.gif; sourceTree = "<group>"; };
+		543485681C6AADF900184127 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		5492EBD81C5B271600A97F06 /* Dripp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dripp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5492EBDB1C5B271600A97F06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5492EBE21C5B271600A97F06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -165,7 +164,6 @@
 		54EFBE711C65C7E9008BCE7A /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		54EFBE741C65C92C008BCE7A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		54EFBE761C65CC60008BCE7A /* ApiKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
-		54EFBE781C65CC8A008BCE7A /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		54EFBE7A1C66A98A008BCE7A /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		89AC20D05B519CBA808E268B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8A333912402514296D82CBFD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -352,7 +350,6 @@
 			isa = PBXGroup;
 			children = (
 				5492EC111C5B2ECE00A97F06 /* ProfileViewController.swift */,
-				542CD0421C5EBDBC006C7A99 /* AchievementsViewController.swift */,
 				542CD0441C5EBDD2006C7A99 /* AchievementCell.swift */,
 			);
 			name = Profile;
@@ -400,7 +397,7 @@
 			children = (
 				54EFBE741C65C92C008BCE7A /* LoginViewController.swift */,
 				54EFBE7A1C66A98A008BCE7A /* AuthenticationManager.swift */,
-				54EFBE781C65CC8A008BCE7A /* ApiKeys.plist */,
+				543485681C6AADF900184127 /* ApiKeys.plist */,
 				54EFBE761C65CC60008BCE7A /* ApiKeys.swift */,
 			);
 			name = Authentication;
@@ -604,7 +601,7 @@
 				5492EBE81C5B271600A97F06 /* LaunchScreen.storyboard in Resources */,
 				5492EBE51C5B271600A97F06 /* Assets.xcassets in Resources */,
 				542CD04B1C5F1364006C7A99 /* NEWGIF.gif in Resources */,
-				54EFBE791C65CC8A008BCE7A /* ApiKeys.plist in Resources */,
+				543485691C6AADF900184127 /* ApiKeys.plist in Resources */,
 				5492EBE31C5B271600A97F06 /* Main.storyboard in Resources */,
 				5492EC1C1C5BF64F00A97F06 /* sample.mp3 in Resources */,
 			);
@@ -710,7 +707,6 @@
 				5492EC231C5C04ED00A97F06 /* FeedCell.swift in Sources */,
 				5492EC2D1C5C206400A97F06 /* FriendsViewController.swift in Sources */,
 				5492EC3C1C5CBD2A00A97F06 /* FriendsCell.swift in Sources */,
-				542CD0431C5EBDBC006C7A99 /* AchievementsViewController.swift in Sources */,
 				542CD0491C5F0C2B006C7A99 /* WebViewController.swift in Sources */,
 				5492EC1F1C5BF95400A97F06 /* Dripper.swift in Sources */,
 				5492EBDC1C5B271600A97F06 /* AppDelegate.swift in Sources */,

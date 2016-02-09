@@ -10,6 +10,4 @@ import Foundation
 
 class AchievementCell: UICollectionViewCell {
     @IBOutlet var image : UIImageView?
-    @IBOutlet var name : UILabel?
-    
 }

@@ -743,14 +743,14 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P29-03-vFI">
-                                <rect key="frame" x="0.0" y="330" width="600" height="1"/>
+                                <rect key="frame" x="0.0" y="366" width="600" height="1"/>
                                 <color key="backgroundColor" red="0.7876643270944742" green="0.7876643270944742" blue="0.7876643270944742" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Iov-QV-fjk"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tk4-ZQ-fYt">
-                                <rect key="frame" x="15" y="345" width="573" height="191"/>
+                                <rect key="frame" x="15" y="381" width="573" height="155"/>
                                 <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m3b-nY-ExW">
                                     <size key="itemSize" width="100" height="100"/>
@@ -760,7 +760,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="achievement" id="fyj-tv-njv" customClass="AchievementCell" customModule="Dripp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="46" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -792,6 +792,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="F0j-df-mrp" firstAttribute="top" secondItem="P29-03-vFI" secondAttribute="bottom" constant="-30" id="3v3-Sx-SbJ"/>
                             <constraint firstItem="gyx-Ic-Usg" firstAttribute="centerX" secondItem="UMk-Gz-bSj" secondAttribute="centerX" id="5Py-qk-1IJ"/>
                             <constraint firstItem="tk4-ZQ-fYt" firstAttribute="top" secondItem="P29-03-vFI" secondAttribute="bottom" constant="14" id="7N5-vq-Xgf"/>
                             <constraint firstItem="gyx-Ic-Usg" firstAttribute="top" secondItem="Vdt-d0-LXj" secondAttribute="bottom" constant="24" id="E4S-UR-HD1"/>
@@ -814,6 +815,7 @@
                                 <exclude reference="hBz-Qf-Weq"/>
                                 <exclude reference="qab-cB-NJP"/>
                                 <exclude reference="xaB-06-xOZ"/>
+                                <exclude reference="VnF-wV-SBU"/>
                                 <exclude reference="lmw-5A-QrU"/>
                             </mask>
                         </variation>

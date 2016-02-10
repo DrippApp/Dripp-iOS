@@ -18,7 +18,9 @@ class PlayerViewController: UIViewController, WCSessionDelegate {
     
     var watchSession : WCSession?
     var audioPlayer : AVAudioPlayer?
-    let waterView = WaterView(frame: CGRectMake(0, 0, 400, 700))
+    //get size of screen
+    let screenSize: CGRect = UIScreen.mainScreen().bounds
+    var waterView : WaterView!
     var playlist = [Song]()
     var isPlaying = false
     var timer:NSTimer!
@@ -47,6 +49,8 @@ class PlayerViewController: UIViewController, WCSessionDelegate {
     @IBOutlet weak var progressBar: UIProgressView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Create water based on screen size
+        waterView = WaterView(frame: CGRectMake(0, 0, screenSize.size.width, screenSize.size.height+15))
         
         if(WCSession.isSupported()){
             watchSession = WCSession.defaultSession()

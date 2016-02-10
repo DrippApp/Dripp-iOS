@@ -22,10 +22,5 @@ class WebViewController: UIViewController {
         self.navigationItem.title = "Credits"
         
     }
-    
-    func webViewDidFinishLoad(webView: UIWebView) {
-        let htmlTitle = webView.stringByEvaluatingJavaScriptFromString("document.title")
-        self.navigationItem.title = htmlTitle
-    }
 
 }

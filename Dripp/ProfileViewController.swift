@@ -16,9 +16,8 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var nextLevel: UIImageView!
     @IBOutlet weak var nextLevelText: UILabel!
     @IBOutlet weak var progressBar: MBCircularProgressBarView!
-    
     @IBOutlet weak var currentLevelText: UILabel!
-    var achievements = [String]()
+    var achievements = [Achievement]()
     var id = ""
     
     override func viewDidLoad() {
@@ -31,7 +30,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate {
         profilePicture.layer.masksToBounds = false
         profilePicture.clipsToBounds = true
         self.navigationItem.title = ""
-        //level
+        // Level Status
         currentLevelText.text = "1"
         nextLevelText.text = "2"
         
@@ -62,7 +61,16 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate {
         let progressBlue = UIColor(hexString: "#4E8DCB")
         self.progressBar.progressColor = progressBlue
         self.progressBar.progressStrokeColor = progressBlue
-        achievements = ["a.png",  "b.png", "c.png", "d.png", "e.png", "f.png", "g.png", "h.png", "i.png", "j.png", "k.png", "l.png", "m.png"]
+        self.achievements.append(Achievement(id: 1, title: "Power Shower", description: "You showered in under 10 minutes", image: "lock"))
+        self.achievements.append(Achievement(id: 1, title: "Power Shower2", description: "You showered in under 10 minutes", image: "lock"))
+        self.achievements.append(Achievement(id: 1, title: "Power Shower3", description: "You showered in under 10 minutes", image: "lock"))
+        self.achievements.append(Achievement(id: 1, title: "Power Shower4", description: "You showered in under 10 minutes", image: "lock"))
+        self.achievements.append(Achievement(id: 1, title: "Power Shower5", description: "You showered in under 10 minutes", image: "lock"))
+        self.achievements.append(Achievement(id: 1, title: "Power Shower6", description: "You showered in under 10 minutes", image: "lock"))
+        self.achievements.append(Achievement(id: 1, title: "Power Shower7", description: "You showered in under 10 minutes", image: "lock"))
+        self.achievements.append(Achievement(id: 1, title: "Power Shower8", description: "You showered in under 10 minutes", image: "lock"))
+        self.achievements.append(Achievement(id: 1, title: "Power Shower9", description: "You showered in under 10 minutes", image: "lock"))
+        self.achievements.append(Achievement(id: 1, title: "Power Shower10", description: "You showered in under 10 minutes", image: "lock"))
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -80,15 +88,15 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("achievement", forIndexPath: indexPath) as! AchievementCell
-        cell.image?.image = UIImage(named: "shower")
+        cell.image?.image = UIImage(named: achievements[indexPath.item].image)
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let achievement = achievements[indexPath.item]
         
-        let alert = UIAlertController(title: "Power Shower", message: "You took a shower in less than 10 minutes! \(achievement)", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Sweet", style: UIAlertActionStyle.Default, handler: { alertAction in
+        let alert = UIAlertController(title: achievement.title, message: achievement.description, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Okey Dokey", style: UIAlertActionStyle.Default, handler: { alertAction in
             alert.dismissViewControllerAnimated(true, completion: nil)
         }))
         self.presentViewController(alert, animated: true, completion: nil)

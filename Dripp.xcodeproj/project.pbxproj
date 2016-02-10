@@ -13,6 +13,7 @@
 		542CD0491C5F0C2B006C7A99 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542CD0481C5F0C2B006C7A99 /* WebViewController.swift */; };
 		542CD04B1C5F1364006C7A99 /* NEWGIF.gif in Resources */ = {isa = PBXBuildFile; fileRef = 542CD04A1C5F1364006C7A99 /* NEWGIF.gif */; };
 		543485691C6AADF900184127 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 543485681C6AADF900184127 /* ApiKeys.plist */; };
+		5434856B1C6AB35A00184127 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434856A1C6AB35A00184127 /* Achievement.swift */; };
 		5492EBDC1C5B271600A97F06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492EBDB1C5B271600A97F06 /* AppDelegate.swift */; };
 		5492EBE31C5B271600A97F06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5492EBE11C5B271600A97F06 /* Main.storyboard */; };
 		5492EBE51C5B271600A97F06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5492EBE41C5B271600A97F06 /* Assets.xcassets */; };
@@ -122,6 +123,7 @@
 		542CD0481C5F0C2B006C7A99 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		542CD04A1C5F1364006C7A99 /* NEWGIF.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = NEWGIF.gif; sourceTree = "<group>"; };
 		543485681C6AADF900184127 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
+		5434856A1C6AB35A00184127 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		5492EBD81C5B271600A97F06 /* Dripp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dripp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5492EBDB1C5B271600A97F06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5492EBE21C5B271600A97F06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				5492EC4F1C5DCE0500A97F06 /* Playlist.swift */,
 				5492EC241C5C052100A97F06 /* Colors.swift */,
 				5492EC2E1C5C2A2D00A97F06 /* Song.swift */,
+				5434856A1C6AB35A00184127 /* Achievement.swift */,
 				5492EC1E1C5BF95400A97F06 /* Dripper.swift */,
 			);
 			name = Objects;
@@ -702,6 +705,7 @@
 				5492EC2B1C5C1D8200A97F06 /* UIImageColors.swift in Sources */,
 				5492EC3E1C5CC97B00A97F06 /* FeedItem.swift in Sources */,
 				5492EC251C5C052100A97F06 /* Colors.swift in Sources */,
+				5434856B1C6AB35A00184127 /* Achievement.swift in Sources */,
 				54EFBE7B1C66A98A008BCE7A /* AuthenticationManager.swift in Sources */,
 				5492EC4C1C5DCAF800A97F06 /* ToolbarManager.swift in Sources */,
 				5492EC231C5C04ED00A97F06 /* FeedCell.swift in Sources */,

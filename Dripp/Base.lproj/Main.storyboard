@@ -772,6 +772,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.81297394904343434" green="0.81297394904343434" blue="0.81297394904343434" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailingMargin" secondItem="b4q-x5-cRP" secondAttribute="trailing" constant="-8" id="2IY-pZ-oLU"/>
                                             <constraint firstItem="b4q-x5-cRP" firstAttribute="top" secondItem="fyj-tv-njv" secondAttribute="topMargin" constant="-8" id="7YY-h1-HHr"/>

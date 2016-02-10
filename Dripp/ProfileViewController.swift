@@ -89,6 +89,8 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("achievement", forIndexPath: indexPath) as! AchievementCell
         cell.image?.image = UIImage(named: achievements[indexPath.item].image)
+        cell.contentView.layer.cornerRadius = 5
+        cell.contentView.layer.masksToBounds = true
         return cell
     }
     

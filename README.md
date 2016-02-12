@@ -8,6 +8,19 @@ $ pod install
 
 Afterwards, open up the `Dripp.xcworkspace` file in Xcode
 
+When you have the project open in Xcode, create a new file called `ApiKeys.plist` and have it match the following content.
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>drippApiKey</key>
+	<string>ENTER_IN_API_KEY_HERE</string>
+</dict>
+</plist>
+```
+
 # What is Dripp?
 
 Dripp is a social challenge app that encourages individuals to reduce their water waste by listening to music. To use Dripp, simply start a shower, select a playlist, and go - Dripp takes care of the rest! Dripp analyzes the length of your shower and intuitively suggests playlists of shorter length to help minimize water usage while integrating seamlessly into your everyday routine.

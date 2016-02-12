@@ -10,14 +10,17 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import Haneke
+import DZNEmptyDataSet
 
-class FriendsViewController: UITableViewController {
+class FriendsViewController: UITableViewController, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     
     var friends = [Dripper]()
     @IBOutlet var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.emptyDataSetSource = self
+        tableView.emptyDataSetDelegate = self
         tableView.tableFooterView = UIView()
         self.view.backgroundColor = UIColor(hexString: "#f1f1f1")
         let params = ["fields": "name, id, friends"]
@@ -99,5 +102,33 @@ class FriendsViewController: UITableViewController {
         challenge.backgroundColor = UIColor.blueHeader
         
         return [challenge]
+    }
+    
+    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let str = "Feeling alone?"
+        let attrs = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let str = "We automatically link your Facebook friends who also use Dripp."
+        let attrs = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleBody)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+//    func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
+//        return UIImage(named: "default")
+//    }
+    
+    func buttonTitleForEmptyDataSet(scrollView: UIScrollView!, forState state: UIControlState) -> NSAttributedString! {
+        let str = "Share Dripp with Friends"
+        let attrs = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleCallout)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func emptyDataSetDidTapButton(scrollView: UIScrollView!) {
+        let ac = UIAlertController(title: "Share with a friend", message: "Implement this later", preferredStyle: .Alert)
+        ac.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
+        presentViewController(ac, animated: true, completion: nil)
     }
 }

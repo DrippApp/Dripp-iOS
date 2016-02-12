@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/Alamofire.framework"
+  install_framework "Pods/DZNEmptyDataSet.framework"
   install_framework "Pods/EasyAnimation.framework"
   install_framework "Pods/Haneke.framework"
   install_framework "Pods/KeychainAccess.framework"
@@ -95,6 +96,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/Alamofire.framework"
+  install_framework "Pods/DZNEmptyDataSet.framework"
   install_framework "Pods/EasyAnimation.framework"
   install_framework "Pods/Haneke.framework"
   install_framework "Pods/KeychainAccess.framework"

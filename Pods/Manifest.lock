@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (3.2.0)
+  - DZNEmptyDataSet (1.7.3)
   - EasyAnimation (1.0.2)
   - HanekeSwift (0.10.1)
   - KeychainAccess (2.3.3)
@@ -10,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - DZNEmptyDataSet
   - EasyAnimation
   - HanekeSwift
   - KeychainAccess
@@ -20,6 +22,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
+  DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
   EasyAnimation: 9615e40f58aa7d8d6a67de66e0edda1903ffa990
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
   KeychainAccess: 9b7e49e48277e329b1b3195e54697ed313d30acf

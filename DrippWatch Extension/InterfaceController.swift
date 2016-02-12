@@ -14,7 +14,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     // Our WatchConnectivity Session for communicating with the iOS app
     var watchSession : WCSession?
-    
     @IBOutlet var playPauseButton: WKInterfaceButton!
     @IBOutlet var stopButton: WKInterfaceButton!
     @IBOutlet var messagelabel: WKInterfaceLabel!

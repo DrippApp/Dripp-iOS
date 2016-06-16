@@ -54,7 +54,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate {
             else
             {
                 let id = result.valueForKey("id") as! NSString as String
-                self.profilePicture.hnk_setImageFromURL(NSURL(string: "https://graph.facebook.com/\(id)/picture?type=large&return_ssl_resources=1")!)
+                self.profilePicture.hnk_setImageFromURL(NSURL(string: "https://graph.facebook.com/\(id)/picture?width=800&height=800&return_ssl_resources=1")!)
                 self.navigationItem.title = result.valueForKey("name") as! NSString as String
             }
         })

@@ -42,14 +42,15 @@ class FriendsViewController: UITableViewController, DZNEmptyDataSetSource, DZNEm
                     let valueDict : NSDictionary = data[i] as! NSDictionary
                     let id = valueDict.objectForKey("id") as! String
                     let name = valueDict.objectForKey("name") as! String
-                    self.friends.append(Dripper(uid: id, firstName: name, lastName: "", email: "", photo: "https://graph.facebook.com/\(id)/picture?type=large&return_ssl_resources=1", accountType: "", lowestShowerLength: "", savedWater: ""))
+                    self.friends.append(Dripper(uid: id, firstName: name, lastName: "", email: "", photo: "https://graph.facebook.com/\(id)/picture?width=800&height=800&return_ssl_resources=1", accountType: "", lowestShowerLength: "", savedWater: ""))
                     print("the id value is \(id)")
                 }
                 self.table.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
+                self.table.reloadEmptyDataSet()
                 
             }
         })
-
+        
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -105,7 +106,7 @@ class FriendsViewController: UITableViewController, DZNEmptyDataSetSource, DZNEm
     }
     
     func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
-        let str = "Feeling alone?"
+        let str = "Want a bubble buddy?"
         let attrs = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)]
         return NSAttributedString(string: str, attributes: attrs)
     }
@@ -116,9 +117,9 @@ class FriendsViewController: UITableViewController, DZNEmptyDataSetSource, DZNEm
         return NSAttributedString(string: str, attributes: attrs)
     }
     
-//    func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
-//        return UIImage(named: "default")
-//    }
+    //    func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
+    //        return UIImage(named: "default")
+    //    }
     
     func buttonTitleForEmptyDataSet(scrollView: UIScrollView!, forState state: UIControlState) -> NSAttributedString! {
         let str = "Share Dripp with Friends"
@@ -130,5 +131,6 @@ class FriendsViewController: UITableViewController, DZNEmptyDataSetSource, DZNEm
         let ac = UIAlertController(title: "Share with a friend", message: "Implement this later", preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
         presentViewController(ac, animated: true, completion: nil)
+        
     }
 }
